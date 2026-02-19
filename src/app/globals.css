@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #0e3f45;
+  --color-accent-gold: #c5a059;
+  --color-gold-accent: #c5a059;
+  --color-background-light: #f8f9fa;
+  --color-background-dark: #121619;
+  --color-text-main: #0d1b1c;
+  --color-text-muted: #5c6b70;
+
+  --font-display: var(--font-poppins), sans-serif;
+  --font-sans: var(--font-montserrat), var(--font-poppins), sans-serif;
+  --font-manrope: var(--font-montserrat), var(--font-poppins), sans-serif;
+
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-montserrat), var(--font-poppins), sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-poppins), sans-serif;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+/* Google Translate Overrides - Strict Hiding */
+iframe.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
+
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+.goog-te-banner-frame.skiptranslate,
+.skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.goog-te-menu-value:hover {
+  text-decoration: none !important;
+}
+
+/* Hide Tooltips and Popups */
+.goog-tooltip,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+div#goog-gt- {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Hide Icons */
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+/* Hide original text tooltip on hover */
+.goog-text-highlight:hover {
+  box-shadow: none !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
