@@ -37,9 +37,9 @@ const FamilyTree = () => {
               {/* Node Card */}
               <div className={`bg-gray-50 dark:bg-[#1a2024] p-6 lg:p-8 rounded-[2rem] border transition-all duration-500 relative ${hoveredNode === index ? 'border-accent-gold shadow-2xl shadow-accent-gold/10 -translate-y-1' : 'border-gray-100 dark:border-gray-800'}`}>
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                  <h3 className="text-2xl font-display font-bold text-[#0d1b1c] dark:text-white">{person.name}</h3>
+                  <h3 className="text-2xl font-display font-bold text-[#0d1b1c] dark:text-white notranslate">{person.name}</h3>
                   {person.village && (
-                    <span className="px-4 py-1.5 bg-accent-gold/10 text-accent-gold text-xs font-bold rounded-full border border-accent-gold/20">
+                    <span className="px-4 py-1.5 bg-accent-gold/10 text-accent-gold text-xs font-bold rounded-full border border-accent-gold/20 notranslate">
                        {person.village}
                     </span>
                   )}
@@ -51,11 +51,11 @@ const FamilyTree = () => {
                     <div className="flex flex-wrap gap-2">
                       {(Array.isArray(person.wives) ? person.wives : [person.wives]).map((w: any, i: number) => (
                         <div key={i} className="group/wife relative">
-                          <span className="inline-block px-3 py-1 bg-pink-50 dark:bg-pink-900/10 text-pink-700 dark:text-pink-300 text-[11px] font-bold rounded-md border border-pink-100 dark:border-pink-800/30">
+                          <span className="inline-block px-3 py-1 bg-pink-50 dark:bg-pink-900/10 text-pink-700 dark:text-pink-300 text-[11px] font-bold rounded-md border border-pink-100 dark:border-pink-800/30 notranslate">
                             {typeof w === 'string' ? w : w.name} {(w.from) && `(${w.from})`}
                           </span>
                           {w.details && (
-                            <div className="absolute bottom-full left-0 mb-2 w-48 p-3 bg-[#0b272c] text-white text-[10px] rounded-xl opacity-0 group-hover/wife:opacity-100 transition-opacity z-20 pointer-events-none shadow-xl border border-white/10">
+                            <div className="absolute bottom-full left-0 mb-2 w-48 p-3 bg-[#0b272c] text-white text-[10px] rounded-xl opacity-0 group-hover/wife:opacity-100 transition-opacity z-20 pointer-events-none shadow-xl border border-white/10 notranslate">
                               {w.details}
                             </div>
                           )}
@@ -68,7 +68,7 @@ const FamilyTree = () => {
                     <div className="flex flex-wrap gap-2 items-center">
                        <span className="text-[10px] uppercase font-bold text-gray-400 mr-2">पुत्र:</span>
                        {person.sons.map((son: string, i: number) => (
-                         <span key={i} className="px-3 py-1 bg-blue-50 dark:bg-blue-900/10 text-blue-700 dark:text-blue-300 text-[11px] font-bold rounded-md border border-blue-100 dark:border-blue-800/30">
+                         <span key={i} className="px-3 py-1 bg-blue-50 dark:bg-blue-900/10 text-blue-700 dark:text-blue-300 text-[11px] font-bold rounded-md border border-blue-100 dark:border-blue-800/30 notranslate">
                            {son}
                          </span>
                        ))}
@@ -76,7 +76,7 @@ const FamilyTree = () => {
                   )}
 
                   {person.note && (
-                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed italic border-t border-gray-100 dark:border-gray-800 pt-4 mt-4">
+                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed italic border-t border-gray-100 dark:border-gray-800 pt-4 mt-4 notranslate">
                       {person.note}
                     </p>
                   )}

@@ -38,7 +38,7 @@ export default function About() {
               <span className="opacity-90">मानवता की सेवा</span>
             </h1>
             <p className="text-white/90 text-xl md:text-2xl font-light max-w-3xl mx-auto mb-10 leading-relaxed drop-shadow-lg">
-               " <span className="font-semibold text-white border-b-2 border-accent-gold/50">संत श्री रणधीर जी बाबल</span> के कालातीत ज्ञान में निहित, हम जरूरतमंदों के लिए आशा के पुल बनाते हैं।"
+               " <span className="font-semibold text-white border-b-2 border-accent-gold/50 notranslate">संत श्री रणधीर जी बाबल</span> के कालातीत ज्ञान में निहित, हम जरूरतमंदों के लिए आशा के पुल बनाते हैं।"
             </p>
           </div>
         </section>
@@ -82,10 +82,10 @@ export default function About() {
                         </div>
                         <div className="flex-1 text-center md:text-left">
                             <blockquote className="text-base text-gray-700 dark:text-gray-300 italic mb-6 leading-relaxed">
-                                "हमारा मिशन मानवता की सेवा उसी भक्ति के साथ करना है जो संत रणधीर जी की प्रकृति के लिए थी।"
+                                "हमारा मिशन मानवता की सेवा उसी भक्ति के साथ करना है जो <span className="notranslate">संत रणधीर जी</span> की प्रकृति के लिए थी।"
                             </blockquote>
                             <div>
-                                <h3 className="text-xl font-bold text-[#0d1b1c] dark:text-white font-display">अध्यक्ष श्री रमेश बाबल</h3>
+                                <h3 className="text-xl font-bold text-[#0d1b1c] dark:text-white font-display notranslate">अध्यक्ष श्री रमेश बाबल</h3>
                                 <p className="text-primary dark:text-accent-gold font-bold uppercase tracking-wider text-[10px] mt-1">अध्यक्ष, संस्थान</p>
                             </div>
                         </div>
@@ -106,12 +106,12 @@ export default function About() {
                             </div>
                         </div>
                         <div className="flex-1 text-center md:text-left">
-                            <blockquote className="text-base text-gray-700 dark:text-gray-300 italic mb-6 leading-relaxed">
+                            <blockquote className="text-base text-gray-700 dark:text-gray-300 italic mb-6 leading-relaxed text-balance">
                                 "संस्थान के माध्यम से समाज में शिक्षा और संस्कारों का बीजारोपण करना ही हमारा मुख्य लक्ष्य है।"
                             </blockquote>
                             <div>
-                                <h3 className="text-xl font-bold text-[#0d1b1c] dark:text-white font-display">जयकिशन बिश्नोई</h3>
-                                <p className="text-primary dark:text-accent-gold font-bold uppercase tracking-wider text-[10px] mt-1">महासचिव (बासनी निकुबा)</p>
+                                <h3 className="text-xl font-bold text-[#0d1b1c] dark:text-white font-display notranslate">जयकिशन बिश्नोई</h3>
+                                <p className="text-primary dark:text-accent-gold font-bold uppercase tracking-wider text-[10px] mt-1">महासचिव (<span className="notranslate">बासनी निकुबा</span>)</p>
                             </div>
                         </div>
                     </div>
@@ -133,10 +133,10 @@ export default function About() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {[
-                        "श्री जम्भेश्वर भगवान के दर्शन एवं शिक्षाओं का प्रचार-प्रसार करना।",
-                        "श्री जम्भेश्वर भगवान् के परम शिष्य श्री रणधीरजी बाबल की विचारधारा एवं शिक्षा से सम्बन्धित समस्त कार्य करना।",
-                        "श्री रणधीरजी बाबल के नाम से मेला प्रारम्भ एवं संचालन करना।",
-                        "बाबल गौत्र के इतिहास एवं वंशावली को संग्रहित एवं प्रकाशित करना।",
+                        <><span className="notranslate">श्री जम्भेश्वर भगवान</span> के दर्शन एवं शिक्षाओं का प्रचार-प्रसार करना।</>,
+                        <><span className="notranslate">श्री जम्भेश्वर भगवान्</span> के परम शिष्य <span className="notranslate">श्री रणधीरजी बाबल</span> की विचारधारा एवं शिक्षा से सम्बन्धित समस्त कार्य करना।</>,
+                        <><span className="notranslate">श्री रणधीरजी बाबल</span> के नाम से मेला प्रारम्भ एवं संचालन करना।</>,
+                        <><span className="notranslate">बाबल</span> गौत्र के इतिहास एवं वंशावली को संग्रहित एवं प्रकाशित करना।</>,
                         "पर्यावरण एवं पारिस्थितिक संरक्षण का कार्य करना।",
                         "समाज में व्याप्त कुरीतियों का उन्मूलन करना।",
                         "बालक, बालिकाओं, महिलाओं एवं प्रौढ़जन के शिक्षा एवं विकास सम्बन्धि कार्य करना।",
@@ -144,7 +144,7 @@ export default function About() {
                         "विद्यालय, महाविद्यालय, विश्वविद्यालय को प्रारम्भ एवं उनका संचालन करना।",
                         "छात्र-छात्राओं के लिए छात्रावास, वाचनालय प्रारम्भ करना एवं उनका संचालन करना।",
                         "शिक्षा, स्वास्थय, चिकित्सा, खेती के विकास से सम्बन्धित कार्य करना।",
-                        "विश्नोई पंथ के साहित्य एवं विकास हेतु समस्त कार्य करना।",
+                        <><span className="notranslate">विश्नोई पंथ</span> के साहित्य एवं विकास हेतु समस्त कार्य करना।</>,
                         "जनहित से सम्बधित अन्य कार्य करना।"
                     ].map((item, index) => (
                         <div key={index} className="flex gap-4 p-7 rounded-2xl bg-gray-50 dark:bg-[#1a2024] border border-gray-100 dark:border-gray-800 hover:border-accent-gold/40 transition-all duration-300 hover:shadow-xl group">
@@ -205,7 +205,7 @@ export default function About() {
                                 <div className="space-y-4">
                                     <h4 className="text-accent-gold font-bold uppercase tracking-widest text-xs">पात्रता / Eligibility</h4>
                                     <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed break-words">
-                                        <strong>योग्यता:</strong> सदस्य बालिग होना चाहिए, पूर्ण शाकाहारी, वन्य जीवों का शिकार न करने वाला एवं श्री जम्भेश्वर भगवान के सिद्धांतों में अटूट विश्वास रखने वाला होना चाहिए।
+                                        <strong>योग्यता:</strong> सदस्य बालिग होना चाहिए, पूर्ण शाकाहारी, वन्य जीवों का शिकार न करने वाला एवं <span className="notranslate">श्री जम्भेश्वर भगवान</span> के सिद्धांतों में अटूट विश्वास रखने वाला होना चाहिए।
                                     </p>
                                 </div>
                                 
