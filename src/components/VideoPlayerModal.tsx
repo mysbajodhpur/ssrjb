@@ -34,39 +34,43 @@ const VideoPlayerModal: React.FC<VideoPlayerModalProps> = ({ isOpen, onClose, vi
                 <span className="material-symbols-outlined notranslate text-3xl group-hover:rotate-90 transition-transform">close</span>
             </button>
 
-            {/* Video Container */}
-            <div className="w-full max-w-4xl aspect-video px-4 relative">
-                {/* Decorative border or glow */}
-                <div className="absolute -inset-1 bg-accent-gold/20 blur-2xl rounded-[2rem] -z-10 animate-pulse"></div>
-                
-                <div className="w-full h-full bg-black rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10 relative">
-                    {/* Dynamic Player (YouTube or Local) */}
-                    {videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be') ? (
-                        <iframe 
-                            className="w-full h-full"
-                            src={videoSrc} 
-                            title="YouTube video player" 
-                            frameBorder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowFullScreen
-                        ></iframe>
-                    ) : (
-                        <video 
-                            src={videoSrc} 
-                            className="w-full h-full object-contain"
-                            controls
-                            autoPlay
-                            playsInline
-                        >
-                            Your browser does not support the video tag.
-                        </video>
-                    )}
+            {/* Modal Content Wrapper */}
+            <div className="flex flex-col items-center justify-center w-full max-w-4xl px-4 gap-6 animate-in zoom-in-95 duration-300">
+                {/* Video Container */}
+                <div className="w-full aspect-video relative">
+                    {/* Decorative border or glow */}
+                    <div className="absolute -inset-1 bg-accent-gold/20 blur-2xl rounded-[2rem] -z-10 animate-pulse"></div>
+                    
+                    <div className="w-full h-full bg-black rounded-[1rem] md:rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 relative">
+                        {/* Dynamic Player (YouTube or Local) */}
+                        {videoSrc.includes('youtube.com') || videoSrc.includes('youtu.be') ? (
+                            <iframe 
+                                className="w-full h-full"
+                                src={videoSrc} 
+                                title="YouTube video player" 
+                                frameBorder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowFullScreen
+                            ></iframe>
+                        ) : (
+                            <video 
+                                src={videoSrc} 
+                                className="w-full h-full object-contain"
+                                controls
+                                autoPlay
+                                playsInline
+                            >
+                                Your browser does not support the video tag.
+                            </video>
+                        )}
+                    </div>
                 </div>
 
-                {/* Video Info Overlay (Optional) */}
-                <div className="absolute -bottom-16 left-4 right-4 text-center">
-                    <h3 className="text-white text-lg font-bold font-display tracking-wide uppercase">
-                        संत श्री रणधीर जी बाबल <span className="text-accent-gold">— जीवन दर्शन (Documentary)</span>
+                {/* Video Info Overlay (Responsive) */}
+                <div className="text-center px-4">
+                    <h3 className="text-white text-base md:text-lg font-bold font-display tracking-wide uppercase leading-tight">
+                        संत श्री रणधीर जी बाबल <br className="md:hidden" />
+                        <span className="text-accent-gold">— जीवन दर्शन (Documentary)</span>
                     </h3>
                 </div>
             </div>

@@ -13,7 +13,7 @@ const FloatingVideoButton = () => {
             <div className="fixed bottom-24 left-6 md:left-10 z-[80] group">
                 <button 
                     onClick={() => setIsModalOpen(true)}
-                    className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center bg-white dark:bg-[#1a2024] rounded-full shadow-[0_0_30px_rgba(197,160,89,0.3)] border-2 border-accent-gold/20 hover:border-accent-gold transition-all duration-500 hover:scale-110 active:scale-95 group"
+                    className="relative w-12 h-12 md:w-16 md:h-16 flex items-center justify-center bg-white dark:bg-[#1a2024] rounded-full shadow-[0_0_30px_rgba(197,160,89,0.3)] border-2 border-accent-gold/20 hover:border-accent-gold transition-all duration-500 hover:scale-110 active:scale-95 group"
                     aria-label="Watch Documentary"
                 >
                     {/* Pulsing Aura */}
@@ -22,7 +22,7 @@ const FloatingVideoButton = () => {
 
                     {/* Button Image/Icon */}
                     <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center">
-                        <span className="material-symbols-outlined notranslate text-3xl md:text-4xl text-accent-gold translate-x-0.5 group-hover:scale-125 transition-transform duration-500">play_arrow</span>
+                        <span className="material-symbols-outlined notranslate text-2xl md:text-3xl text-accent-gold translate-x-0.5 group-hover:scale-125 transition-transform duration-500">play_arrow</span>
                     </div>
 
                     {/* Label (Hidden by default, shown on hover) */}
