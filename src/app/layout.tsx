@@ -19,6 +19,7 @@ const montserrat = Montserrat({
 
 import { siteConfig } from "@/config/site";
 import BackToTop from "@/components/BackToTop";
+import FloatingVideoButton from "@/components/FloatingVideoButton";
 import GoogleTranslate from "@/components/GoogleTranslate";
 
 export const metadata: Metadata = {
@@ -78,6 +79,7 @@ export default function RootLayout({
       >
         <GoogleTranslate />
         {children}
+        <FloatingVideoButton />
         <BackToTop />
       </body>
     </html>

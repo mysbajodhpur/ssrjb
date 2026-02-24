@@ -40,12 +40,8 @@ export const servicesData = [
                 linkHref: "/contact"
             }
         ],
-        testimonial: {
-            quote: "संस्थान की छात्रवृत्ति ने मुझे अपनी इंजीनियरिंग पूरी करने में मदद की। आज मुझे अपने परिवार का सहारा बनने पर गर्व है।",
-            author: "विक्रम बिश्नोई",
-            role: "पूर्व छात्र",
-            image: "/images/gallery-img-04.jpeg"
-        }
+        relatedCompletedWorkIds: [],
+        relatedUpcomingProjectIds: [1]
     },
     {
         id: "nirogi-kaya",
@@ -87,12 +83,8 @@ export const servicesData = [
                 linkHref: "/contact"
             }
         ],
-        testimonial: {
-            quote: "मेरी माँ को उनके शिविर के माध्यम से मुफ्त मोतियाबिंद की सर्जरी मिली। यह हमारे परिवार के लिए एक आशीर्वाद था।",
-            author: "सुनीता देवी",
-            role: "लाभार्थी",
-            image: "/images/gallery-img-07.jpeg"
-        }
+        relatedCompletedWorkIds: [4, 5],
+        relatedUpcomingProjectIds: []
     },
     {
         id: "paryavaran",
@@ -103,7 +95,7 @@ export const servicesData = [
         heroImage: "/images/gallery-img-15.jpeg",
         description: "उद्देश्य (5) के अनुपालन में, हम पर्यावरण और पारिस्थितिक संरक्षण (Ecological Conservation) के लिए प्रतिबद्ध हैं। हम 'सिर साटे रूँख रहे' की परंपरा को जीवित रखते हैं।",
         stats: [
-            { value: "1L+", label: "खेजड़ी वृक्षारोपण" },
+            { value: "1000+", label: "खेजड़ी वृक्षारोपण" },
             { value: "500+", label: "काला हिरण बचाव" },
             { value: "50+", label: "अमृत सरोवर" },
             { value: "100%", label: "पारिस्थितिक संतुलन" }
@@ -134,12 +126,8 @@ export const servicesData = [
                 linkHref: "/contact"
             }
         ],
-        testimonial: {
-            quote: "घायल हिरणों को बचाने के लिए उनका समर्पण प्रेरणादायक है। वे हर जानवर की अपने बच्चे की तरह देखभाल करते हैं।",
-            author: "रामरख बिश्नोई",
-            role: "पर्यावरणविद्",
-            image: "/images/gallery-img-09.jpeg"
-        }
+        relatedCompletedWorkIds: [4],
+        relatedUpcomingProjectIds: [2]
     },
     {
         id: "sanskar",
@@ -151,9 +139,9 @@ export const servicesData = [
         description: "उद्देश्य (1, 2, 3, 4, 6) के तहत, हम श्री जम्भेश्वर भगवान और संत रणधीर जी की विचारधारा का प्रचार, मेलों का आयोजन और वंशावली संरक्षण करते हैं।",
         stats: [
             { value: "वार्षिक", label: "मेला आयोजन" },
+            { value: "9+", label: "मंदिर एवं भवन निर्माण" },
             { value: "100%", label: "वंशावली संरक्षण" },
-            { value: "साप्ताहिक", label: "सत्संग" },
-            { value: "नशामुक्ति", label: "अभियान" }
+            { value: "साप्ताहिक", label: "सत्संग एवं कथा" }
         ],
         features: [
             {
@@ -181,12 +169,8 @@ export const servicesData = [
                 linkHref: "/contact"
             }
         ],
-        testimonial: {
-            quote: "नशामुक्ति शिविर ने मुझे दूसरा जीवन दिया। अब मैं एक स्वस्थ और सम्मानजनक जीवन जी रहा हूं।",
-            author: "सुरेंद्र कुमार",
-            role: "लाभार्थी",
-            image: "/images/gallery-img-12.jpeg"
-        }
+        relatedCompletedWorkIds: [1, 2, 6, 7, 8, 9],
+        relatedUpcomingProjectIds: [3, 4, 5]
     },
     {
         id: "other",
@@ -199,8 +183,8 @@ export const servicesData = [
         stats: [
             { value: "दैनिक", label: "गौ सेवा" },
             { value: "50+", label: "पक्षी घर" },
-            { value: "24/7", label: "जल सेवा" },
-            { value: "सभी का", label: "स्वागत" }
+            { value: "24/7", label: "प्याऊ (जल सेवा)" },
+            { value: "अविरल", label: "जन सेवा" }
         ],
         features: [
             {
@@ -228,11 +212,7 @@ export const servicesData = [
                 linkHref: "/contact"
             }
         ],
-        testimonial: {
-            quote: "दयालुता का कोई भी कार्य, चाहे वह कितना भी छोटा क्यों न हो, कभी व्यर्थ नहीं जाता। जानवरों के प्रति उनकी दैनिक सेवा हम सभी के लिए एक सबक है।",
-            author: "स्थानीय निवासी",
-            role: "पर्यवेक्षक",
-            image: "/images/gallery-img-08.jpeg"
-        }
+        relatedCompletedWorkIds: [2, 3, 5],
+        relatedUpcomingProjectIds: [2, 5]
     }
 ];

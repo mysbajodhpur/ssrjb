@@ -41,6 +41,7 @@ const Footer = () => {
               <li><Link href="/about" className="hover:text-accent-gold transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-accent-gold/50"></span>हमारी कहानी</Link></li>
               <li><Link href="/team" className="hover:text-accent-gold transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-accent-gold/50"></span>नेतृत्व</Link></li>
               <li><Link href="/gallery" className="hover:text-accent-gold transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-accent-gold/50"></span>फोटो गैलरी</Link></li>
+              <li><Link href="/video" className="hover:text-accent-gold transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-accent-gold/50"></span>जीवन दर्शन (Short Film)</Link></li>
               <li><Link href="/contact" className="hover:text-accent-gold transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-accent-gold/50"></span>संपर्क करें</Link></li>
             </ul>
           </div>

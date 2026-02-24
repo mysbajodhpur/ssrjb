@@ -46,7 +46,7 @@ export default function Contact() {
             {[
               { icon: "mail", title: "ईमेल करें", desc: "सामान्य पूछताछ, दान या प्रतिक्रिया के लिए।", link: "mailto:bishnoi.ramesh@gmail.com", linkText: "bishnoi.ramesh@gmail.com" },
               { icon: "call", title: "कॉल करें", desc: "तत्काल सहायता के लिए हमारे स्वयंसेवकों से बात करें।", link: "tel:+919818757905", linkText: "+91 98187 57905" },
-              { icon: "location_on", title: "पधारें", desc: "हमारा मुख्य आश्रम और सेवा केंद्र।", text: "मुख्यालय श्री जम्भेश्वर भगवान मंदिर,फिटकासनी, जिला जोधपुर, राजस्थान" }
+              { icon: "location_on", title: "पधारें", desc: "हमारा मुख्य कार्यालय", text: "मुख्यालय श्री जम्भेश्वर भगवान मंदिर,फिटकासनी, जिला जोधपुर, राजस्थान" }
             ].map((item, index) => (
               <div key={index} className="bg-white/95 dark:bg-[#1a2024]/95 backdrop-blur-md border-t-4 border-accent-gold p-8 rounded-2xl shadow-xl hover:-translate-y-2 transition-transform duration-300 group">
                 <div className="w-14 h-14 bg-accent-gold/10 rounded-full flex items-center justify-center text-accent-gold mb-6 group-hover:bg-accent-gold group-hover:text-[#0b2b30] transition-colors">

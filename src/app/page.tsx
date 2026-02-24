@@ -3,11 +3,12 @@ import React from "react";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Button from "@/components/Button";
-import Card from "@/components/Card";
-import CTASection from "@/components/CTASection";
 import Link from "next/link";
+import CTASection from "@/components/CTASection";
+import CompletedWorks from "@/components/CompletedWorks";
+import UpcomingProjects from "@/components/UpcomingProjects";
 import { servicesData } from "@/data/services";
+import HomeHero from "@/components/HomeHero";
 
 export const metadata: Metadata = {
   title: {
@@ -23,54 +24,20 @@ export default function Home() {
       
       <main className="flex flex-col flex-grow">
         {/* Hero Section */}
-        <section className="relative pb-30 flex items-center justify-center px-6 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <div 
-              className="w-full h-full bg-cover bg-center bg-no-repeat transform scale-105 animate-slow-zoom" 
-              style={{
-                backgroundImage: 'url("/images/gallery-img-09.jpeg")'
-              }}
-            ></div>
-            <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-primary/95 z-10"></div>
-          </div>
-
-          <div className="relative z-20 max-w-5xl text-center flex flex-col items-center mt-10">
-            <div className="inline-block p-1 px-4 mb-6 rounded-full border border-accent-gold/40 bg-black/40 backdrop-blur-md">
-               <span className="text-accent-gold uppercase tracking-[0.25em] font-bold text-xs">स्थापना १५१३ ई. • बाबलसर</span>
-            </div>
-            
-            <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight mb-6 font-display drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
-              मानवता की सेवा, <br />
-              <span className="italic font-serif font-medium text-accent-gold">प्रकृति का सम्मान</span>
-            </h1>
-            
-            <p className="text-gray-200 text-lg md:text-xl font-light leading-relaxed mb-10 max-w-2xl mx-auto drop-shadow text-shadow-sm">
-              <span className="text-white font-medium border-b border-accent-gold/50 pb-0.5">संत श्री रणधीर जी बाबल</span> की दिव्य विरासत को आगे बढ़ाते हुए। शिक्षा, स्वास्थ्य, संस्कार और पर्यावरण संरक्षण के लिए समर्पित।
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-5 justify-center w-full sm:w-auto">
-              <Link href="/contact" className="px-8 py-3.5 rounded-full bg-accent-gold text-black font-bold text-base hover:bg-white transition-all duration-300 shadow-[0_0_20px_rgba(197,160,89,0.3)] hover:shadow-[0_0_30px_rgba(197,160,89,0.5)] hover:-translate-y-1">
-                हमारे मिशन से जुड़ें
-              </Link>
-              <Link href="/about" className="px-8 py-3.5 rounded-full border border-white/30 bg-white/5 text-white backdrop-blur-sm font-bold text-base hover:bg-white hover:text-primary transition-all duration-300 hover:-translate-y-1">
-                हमारा इतिहास
-              </Link>
-            </div>
-          </div>
-        </section>
+        <HomeHero />
 
         {/* Stats Section - Floating */}
         <section className="relative z-30 -mt-20 px-4 sm:px-6 mb-20 pointer-events-none">
           <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 pointer-events-auto">
             {[
               { count: "500+", label: "गौरवशाली वर्ष", icon: "history_edu" },
-              { count: "1L+", label: "वृक्षारोपण", icon: "forest" },
-              { count: "50k+", label: "रोगियों की सेवा", icon: "medical_services" },
-              { count: "100%", label: "नशामुक्ति अभियान", icon: "self_improvement" }
+              { count: "9+", label: "मुख्य निर्माण कार्य", icon: "temple_hindu" },
+              { count: "1000+", label: "सघन वृक्षारोपण", icon: "forest" },
+              { count: "100%", label: "परोपकार एवं सेवा", icon: "volunteer_activism" }
             ].map((item, index) => (
               <div key={index} className="bg-white/95 dark:bg-[#0e3f45]/95 backdrop-blur p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center text-center group hover:-translate-y-1 transition-all duration-300 border-b-2 border-accent-gold ring-1 ring-black/5">
                 <span className="material-symbols-outlined notranslate text-3xl text-primary dark:text-accent-gold mb-2 opacity-80 group-hover:scale-110 transition-transform">{item.icon}</span>
-                <span className="text-2xl lg:text-3xl font-bold font-display text-primary dark:text-white mb-1">{item.count}</span>
+                <span className="text-2xl lg:text-3xl font-bold font-display text-primary dark:text-white mb-1 notranslate">{item.count}</span>
                 <p className="text-gray-500 dark:text-gray-300 text-[10px] md:text-xs uppercase tracking-widest font-semibold">{item.label}</p>
               </div>
             ))}
@@ -112,7 +79,7 @@ export default function Home() {
               संत श्री रणधीर जी बाबल बिश्नोई पंथ के संस्थापक <strong>गुरु जाम्भोजी</strong> के परम शिष्य थे। 1513 ई. में बाबलसर गांव में जन्मे, उन्होंने अपना जीवन पर्यावरण संरक्षण, जीव दया और आध्यात्मिक जागृति के लिए समर्पित कर दिया।
             </p>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-10">
-              आज, <strong>संत श्री रणधीर जी बाबल सेवा संस्थान</strong>, <strong>श्री रमेश बाबल</strong> के नेतृत्व में, शिक्षा, स्वास्थ्य और वृक्षारोपण अभियानों के माध्यम से इसी 500 साल पुरानी परंपरा को आगे बढ़ा रहा है।
+              आज, <strong>संत श्री रणधीर जी बाबल सेवा संस्थान</strong>, <strong>अध्यक्ष श्री रमेश बाबल</strong> के नेतृत्व में, शिक्षा, स्वास्थ्य और वृक्षारोपण अभियानों के माध्यम से इसी 500 साल पुरानी परंपरा को आगे बढ़ा रहा है।
             </p>
 
             <Link href="/about" className="inline-flex items-center gap-2 text-[#0b2b30] dark:text-accent-gold font-bold uppercase tracking-wider text-sm hover:gap-4 transition-all">
@@ -120,6 +87,9 @@ export default function Home() {
             </Link>
           </div>
         </section>
+
+        {/* Completed Works Section */}
+        <CompletedWorks />
 
         {/* Initiatives (Services) */}
         <section className="bg-gray-50 dark:bg-[#121619] py-20 px-6 lg:px-20 relative overflow-hidden">
@@ -170,6 +140,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Upcoming Projects Section */}
+        <UpcomingProjects />
 
         {/* CTA Section */}
         <CTASection />

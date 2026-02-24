@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import Link from "next/link";
 import { servicesData } from "@/data/services";
+import { completedWorks, upcomingProjects, WorkItem } from "@/data/works";
+import ContributionSection from "@/components/ContributionSection";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -45,6 +47,15 @@ export default async function ServiceDetail({ params }: Props) {
     );
   }
 
+  // Filter related works
+  const relatedCompleted: WorkItem[] = (service as any).relatedCompletedWorkIds 
+    ? completedWorks.filter(w => (service as any).relatedCompletedWorkIds.includes(w.id))
+    : [];
+    
+  const relatedUpcoming: WorkItem[] = (service as any).relatedUpcomingProjectIds
+    ? upcomingProjects.filter(w => (service as any).relatedUpcomingProjectIds.includes(w.id))
+    : [];
+
   return (
     <div className="flex flex-col min-h-screen font-sans bg-gray-50 dark:bg-[#0b1214]">
       <Navbar />
@@ -73,89 +84,63 @@ export default async function ServiceDetail({ params }: Props) {
              </div>
         </section>
 
-        {/* Floating Impact Metrics (Home Page Style) */}
-        <section className="relative z-20 -mt-20 px-6 mb-20">
-            <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
-                {service.stats.map((stat, index) => (
-                    <div key={index} className="bg-white/95 dark:bg-[#0e3f45]/95 backdrop-blur p-8 rounded-2xl shadow-xl flex flex-col items-center justify-center text-center group hover:-translate-y-1 transition-all duration-300 border-b-4 border-accent-gold ring-1 ring-black/5">
-                        <span className="material-symbols-outlined text-4xl text-primary dark:text-accent-gold mb-3 opacity-80 group-hover:scale-110 transition-transform">
-                            {/* Generic icon since stats data doesn't have specific icons, or mapping based on index/label could be added */}
-                            verified
-                        </span>
-                        <span className="text-3xl md:text-4xl font-bold font-display text-primary dark:text-white mb-2">{stat.value}</span>
-                        <p className="text-gray-500 dark:text-gray-300 text-xs uppercase tracking-widest font-semibold">{stat.label}</p>
+        {/* Related Completed Works */}
+        {relatedCompleted.length > 0 && (
+            <section className="py-24 px-6 md:px-16 bg-white dark:bg-[#0b1214]">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <span className="text-accent-gold font-bold uppercase tracking-widest text-xs mb-2 block">कार्य सिद्धि</span>
+                        <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0d1b1c] dark:text-white mb-3">इस क्षेत्र में <span className="text-primary dark:text-accent-gold italic font-serif font-medium">हमारे प्रमुख कार्य</span></h2>
+                        <div className="w-24 h-1 bg-accent-gold mx-auto rounded-full mt-4"></div>
                     </div>
-                ))}
-            </div>
-        </section>
 
-        {/* Key Initiatives Grid */}
-        <section className="py-24 px-6 md:px-16">
-            <div className="max-w-7xl mx-auto">
-                 <div className="text-center mb-16">
-                    <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0d1b1c] dark:text-white mb-3">प्रमुख पहल</h2>
-                    <div className="w-24 h-1 bg-accent-gold mx-auto rounded-full"></div>
-                 </div>
-
-                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {service.features.map((feature, index) => (
-                        <div key={index} className="group bg-white dark:bg-[#1a2024] rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                             <div className="h-48 overflow-hidden relative">
-                                 <div 
-                                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" 
-                                    style={{ backgroundImage: `url('${feature.image}')` }}
-                                 ></div>
-                                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-                             </div>
-                             <div className="p-8 relative">
-                                 <div className="absolute -top-8 right-8 w-16 h-16 bg-white dark:bg-[#1a2024] rounded-full flex items-center justify-center shadow-lg border-2 border-accent-gold/20">
-                                     <span className="material-symbols-outlined text-3xl text-accent-gold">{feature.icon}</span>
-                                 </div>
-                                 <h3 className="text-xl font-bold font-display text-[#0d1b1c] dark:text-white mb-3 mt-2">{feature.title}</h3>
-                                 <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
-                                    {feature.description}
-                                 </p>
-
-                             </div>
-                        </div>
-                    ))}
-                 </div>
-            </div>
-        </section>
-
-        {/* Success Story Section */}
-        {service.testimonial && (
-            <section className="py-20 px-6 bg-[#f4f7f7] dark:bg-[#12181a] relative overflow-hidden">
-                 <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-center gap-16">
-                      <div className="w-full md:w-1/2">
-                           <div className="relative aspect-square rounded-full border-8 border-white dark:border-[#1a2024] shadow-2xl overflow-hidden max-w-[400px] mx-auto">
-                                <img src={service.testimonial.image} alt={service.testimonial.author} className="w-full h-full object-cover" />
-                           </div>
-                      </div>
-                      <div className="w-full md:w-1/2 text-center md:text-left">
-                           <span className="text-accent-gold font-bold uppercase tracking-widest text-sm mb-4 block">सफलता की कहानियाँ</span>
-                           <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0d1b1c] dark:text-white mb-8">वास्तविक प्रभाव</h2>
-                           
-                           <blockquote className="text-xl md:text-2xl font-light italic text-gray-600 dark:text-gray-300 leading-relaxed mb-8 relative">
-                                <span className="absolute -top-4 -left-4 text-6xl text-accent-gold opacity-20 font-serif">"</span>
-                                {service.testimonial.quote}
-                                <span className="absolute -bottom-10 right-0 text-6xl text-accent-gold opacity-20 font-serif">"</span>
-                           </blockquote>
-                           
-                           <div>
-                                <h4 className="text-xl font-bold text-[#0d1b1c] dark:text-white">{service.testimonial.author}</h4>
-                                <p className="text-primary dark:text-accent-gold text-sm uppercase tracking-wide">{service.testimonial.role}</p>
-                           </div>
-                      </div>
-                 </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {relatedCompleted.map((work) => (
+                            <div key={work.id} className="bg-gray-50 dark:bg-[#1a2024] p-8 rounded-2xl border border-gray-100 dark:border-gray-800 hover:border-accent-gold/30 transition-all group">
+                                <span className="material-symbols-outlined notranslate text-4xl text-accent-gold/40 mb-4 group-hover:scale-110 group-hover:text-accent-gold transition-all">
+                                    {work.icon || 'star'}
+                                </span>
+                                <h3 className="text-xl font-bold text-[#0d1b1c] dark:text-white mb-2 font-display">{work.title}</h3>
+                                {work.description && <p className="text-gray-600 dark:text-gray-400 text-sm">{work.description}</p>}
+                                {work.location && <p className="text-accent-gold text-xs mt-4 uppercase tracking-widest font-bold">स्थान: {work.location}</p>}
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </section>
         )}
 
+        {/* Related Upcoming Projects */}
+        {relatedUpcoming.length > 0 && (
+            <section className="py-24 px-6 md:px-16 bg-gray-50 dark:bg-[#0e1618]">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <span className="text-accent-gold font-bold uppercase tracking-widest text-xs mb-2 block">भविष्य का संकल्प</span>
+                        <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0d1b1c] dark:text-white mb-3">आगामी <span className="text-primary dark:text-accent-gold italic font-serif font-medium">योजनाएं</span></h2>
+                        <div className="w-24 h-1 bg-accent-gold mx-auto rounded-full mt-4"></div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        {relatedUpcoming.map((project) => (
+                            <div key={project.id} className="bg-white dark:bg-[#1a2024] p-8 rounded-3xl border-l-4 border-l-accent-gold shadow-sm hover:shadow-md transition-all">
+                                <h3 className="text-xl font-bold text-[#0d1b1c] dark:text-white mb-2 font-display">{project.title}</h3>
+                                {project.description && <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{project.description}</p>}
+                                {project.location && <p className="text-accent-gold text-xs mt-4 uppercase tracking-widest font-bold">प्रस्तावित स्थान: {project.location}</p>}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        )}
+
+        {/* Ways to Contribute Section */}
+        <ContributionSection />
+
         {/* Replaced CTA Section */}
         <CTASection 
-            title="परिवर्तन बनें"
-            description="आपका समर्थन हमें ऐसी और कहानियाँ फिर से लिखने में मदद कर सकता है।"
-            primaryBtnText="इस उद्देश्य का समर्थन करें"
+            title="परिवर्तन का हिस्सा बनें"
+            description="500 वर्षों की इस पावन सेवा परंपरा से जुड़ें और समाज के उत्थान में अपना योगदान दें।"
+            primaryBtnText="आज ही सहयोग करें"
             primaryBtnLink="/contact"
         />
 
