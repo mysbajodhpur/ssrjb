@@ -2,24 +2,26 @@ import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
-    try {
-        const { name, email, subject, message, phone } = await request.json();
+  try {
+    const { name, email, subject, message, phone } = await request.json();
 
-        const transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS,
-            },
-        });
+    const transporter = nodemailer.createTransport({
+      host: 'smtp.hostinger.com',
+      port: 465,
+      secure: true, // Use SSL
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
-        // 1. Admin Email Template (To Ramesh Bishnoi)
-        const adminMailOptions = {
-            from: `"${name}" <${process.env.EMAIL_USER}>`, // Sender address
-            to: process.env.EMAIL_USER, // My email
-            replyTo: email,
-            subject: `New Contact Inquiry: ${subject}`,
-            html: `
+    // 1. Admin Email Template (To Ramesh Bishnoi)
+    const adminMailOptions = {
+      from: `"${name}" <${process.env.EMAIL_USER}>`, // Sender address
+      to: process.env.EMAIL_USER, // My email
+      replyTo: email,
+      subject: `New Contact Inquiry: ${subject}`,
+      html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden;">
           <div style="background-color: #0b2b30; padding: 20px; text-align: center;">
             <h2 style="color: #d4af37; margin: 0; font-family: 'Times New Roman', serif;">संत श्री रणधीर जी बाबल सेवा संस्थान</h2>
@@ -40,14 +42,14 @@ export async function POST(request: Request) {
           </div>
         </div>
       `,
-        };
+    };
 
-        // 2. User Confirmation Email Template
-        const userMailOptions = {
-            from: `"SSRJB Seva Sansthan" <${process.env.EMAIL_USER}>`,
-            to: email,
-            subject: `हमें आपका संदेश प्राप्त हुआ - संत श्री रणधीर जी बाबल सेवा संस्थान`,
-            html: `
+    // 2. User Confirmation Email Template
+    const userMailOptions = {
+      from: `"SSRJB Seva Sansthan" <${process.env.EMAIL_USER}>`,
+      to: email,
+      subject: `हमें आपका संदेश प्राप्त हुआ - संत श्री रणधीर जी बाबल सेवा संस्थान`,
+      html: `
         <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
           <!-- Header -->
           <div style="background: linear-gradient(135deg, #0b2b30 0%, #1a4a52 100%); padding: 30px 20px; text-align: center;">
@@ -85,22 +87,22 @@ export async function POST(request: Request) {
           </div>
         </div>
       `,
-        };
+    };
 
-        // Send both emails
-        await Promise.all([
-            transporter.sendMail(adminMailOptions),
-            transporter.sendMail(userMailOptions),
-        ]);
+    // Send both emails
+    await Promise.all([
+      transporter.sendMail(adminMailOptions),
+      transporter.sendMail(userMailOptions),
+    ]);
 
-        return NextResponse.json({ success: true, message: 'Email sent successfully' }, { status: 200 });
+    return NextResponse.json({ success: true, message: 'Email sent successfully' }, { status: 200 });
 
-    } catch (error) {
-        console.error('Email send error:', error);
-        return NextResponse.json({ success: false, message: 'Failed to send email' }, { status: 500 });
-    }
+  } catch (error) {
+    console.error('Email send error:', error);
+    return NextResponse.json({ success: false, message: 'Failed to send email' }, { status: 500 });
+  }
 }
 
 function nameDisplayName(name: string) {
-    return name.split(' ')[0];
+  return name.split(' ')[0];
 }

@@ -1,6 +1,7 @@
 
 import React from "react";
 import { completedWorks } from "@/data/works";
+import { FormatBabal } from "./FormatBabal";
 
 const CompletedWorks = () => {
   return (
@@ -27,7 +28,7 @@ const CompletedWorks = () => {
                   <span className="material-symbols-outlined notranslate text-2xl">{work.icon}</span>
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-[#0d1b1c] dark:text-white font-display leading-snug">{work.title}</h3>
+                  <h3 className="font-bold text-lg text-[#0d1b1c] dark:text-white font-display leading-snug"><FormatBabal text={work.title} /></h3>
                   {work.location && (
                     <span className="text-[10px] uppercase tracking-widest text-primary dark:text-accent-gold font-bold">
                       {work.location}
@@ -36,7 +37,7 @@ const CompletedWorks = () => {
                 </div>
               </div>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                {work.description}
+                <FormatBabal text={work.description || ""} />
               </p>
             </div>
           ))}

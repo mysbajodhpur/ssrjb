@@ -1,6 +1,7 @@
 
 import type { Metadata } from "next";
 import { Poppins, Montserrat } from "next/font/google";
+import { cookies } from "next/headers";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -64,13 +65,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const googtrans = cookieStore.get('googtrans')?.value;
+  
+  // Determine language based on Google Translate cookie
+  // Format is usually /hi/en or /hi/hi
+  let lang = "hi";
+  if (googtrans && googtrans.includes('/en')) {
+    lang = "en";
+  }
+
   return (
-    <html lang="en" className={`${poppins.variable} ${montserrat.variable}`}>
+    <html lang={lang} className={`${poppins.variable} ${montserrat.variable}`}>
        <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>

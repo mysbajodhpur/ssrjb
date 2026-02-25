@@ -37,10 +37,20 @@ const Navbar = () => {
   }, []);
 
   const handleLanguageChange = (lang: string) => {
-    setCookie(null, 'googtrans', `/hi/${lang}`, {
+    // Determine the cookie value. For Hindi (original), we set it to /hi/hi or just /hi/
+    // but /hi/hi is more explicit for many Google Translate setups.
+    const cookieValue = `/hi/${lang}`;
+    
+    setCookie(null, 'googtrans', cookieValue, {
       maxAge: 30 * 24 * 60 * 60,
       path: '/',
+      sameSite: 'lax'
     });
+    
+    // Also update current state for immediate visual feedback before reload
+    setCurrentLang(lang);
+    
+    // Force a reload to let Google Translate script pick up the new cookie
     window.location.reload();
   };
 
@@ -79,9 +89,9 @@ const Navbar = () => {
               <span className="material-symbols-outlined notranslate text-sm text-accent-gold">call</span>
               +91 98187 57905
             </a>
-            <a href="mailto:bishnoi.ramesh@gmail.com" className="flex items-center gap-2 hover:text-accent-gold transition-colors">
+            <a href="mailto:info@randheerjibabal.org" className="flex items-center gap-2 hover:text-accent-gold transition-colors">
               <span className="material-symbols-outlined notranslate text-sm text-accent-gold">mail</span>
-              bishnoi.ramesh@gmail.com
+              info@randheerjibabal.org
             </a>
             <span className="flex items-center gap-2 text-gray-400">
                <span className="material-symbols-outlined notranslate text-sm text-accent-gold">location_on</span>
@@ -90,12 +100,13 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-6">
              <div className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+              भाषा :-
                <button 
                  onClick={() => handleLanguageChange('hi')} 
                  className={`flex items-center gap-1 transition-colors cursor-pointer ${currentLang !== 'en' ? 'text-accent-gold' : 'hover:text-accent-gold'}`} 
                  title="Hindi"
                >
-                 HI
+                 हिंदी
                </button>
                <span className="w-px h-3 bg-gray-600"></span>
                <button 
@@ -103,7 +114,7 @@ const Navbar = () => {
                  className={`flex items-center gap-1 transition-colors cursor-pointer ${currentLang === 'en' ? 'text-accent-gold' : 'hover:text-accent-gold'}`} 
                  title="English"
                >
-                 EN
+                 English
                </button>
              </div>
              <button 
@@ -131,9 +142,9 @@ const Navbar = () => {
               <img src="/images/randheer-ji.jpg" alt="Sant Shree Randheer Ji" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col">
-               <h2 className="text-[#0e3f45] dark:text-white text-xl md:text-2xl font-bold font-display tracking-tight leading-none group-hover:text-primary transition-colors">
-                  संत श्री रणधीर जी <span className="text-accent-gold">बाबल</span>
-               </h2>
+               <h3 className="text-xl font-display font-bold text-[#0d1b1c] dark:text-white leading-none">
+                  संत श्री रणधीर जी <span className="text-accent-gold notranslate">बाबल</span>
+               </h3>
                <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 dark:text-gray-300 font-bold mt-1">सेवा संस्थान</span>
             </div>
           </Link>

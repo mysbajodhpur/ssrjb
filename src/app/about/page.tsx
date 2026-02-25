@@ -86,7 +86,7 @@ export default function About() {
                             </blockquote>
                             <div>
                                 <h3 className="text-xl font-bold text-[#0d1b1c] dark:text-white font-display notranslate">अध्यक्ष श्री रमेश बाबल</h3>
-                                <p className="text-primary dark:text-accent-gold font-bold uppercase tracking-wider text-[10px] mt-1">अध्यक्ष, संस्थान</p>
+                                <p className="text-primary dark:text-accent-gold font-bold uppercase tracking-wider text-[10px] mt-1">अध्यक्ष, संत श्री रणधीर जी बाबल सेवा संस्थान</p>
                             </div>
                         </div>
                     </div>

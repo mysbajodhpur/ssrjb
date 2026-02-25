@@ -61,6 +61,8 @@ const galleryItems = [
   { id: 53, title: "संस्थान की गतिविधियाँ", src: "/images/504920307_9998662953546307_3774481003850726145_n.jpg" },
   { id: 54, title: "संस्थान की गतिविधियाँ", src: "/images/463653341_8546504708762146_7667201234104561838_n.jpg" },
   { id: 55, title: "संस्थान की गतिविधियाँ", src: "/images/463750036_8546393675439916_8372784249833168757_n.jpg" },
+  { id: 56, title: "संस्थान की गतिविधियाँ", src: "/images/WhatsApp Image 2026-02-25 at 11.57.50 AM.jpeg" },
+  { id: 57, title: "संस्थान की गतिविधियाँ", src: "/images/WhatsApp Image 2026-02-25 at 11.57.47 AM.jpeg" },
 ];
 
 export default function GalleryClient() {

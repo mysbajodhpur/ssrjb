@@ -21,9 +21,9 @@ const Footer = () => {
                 <img src="/images/randheer-ji.jpg" alt="Sant Shree Randheer Ji" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
               </div>
               <div>
-                 <h2 className="text-white text-xl font-bold font-display tracking-tight leading-none">
-                    संत श्री रणधीर जी <span className="text-accent-gold">बाबल</span>
-                 </h2>
+                 <h3 className="text-2xl font-display font-bold text-white mb-2">
+                    संत श्री रणधीर जी <span className="text-accent-gold notranslate">बाबल</span>
+                 </h3>
                  <span className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold block mt-1">सेवा संस्थान</span>
                  <span className="text-[10px] text-gray-500 font-medium block mt-1 tracking-wider">Reg. No. COOP/2023/JODHPUR/203989</span>
               </div>
@@ -74,7 +74,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined notranslate text-accent-gold">mail</span>
-                <a href="mailto:bishnoi.ramesh@gmail.com" className="text-gray-400 hover:text-white transition-colors">bishnoi.ramesh@gmail.com</a>
+                <a href="mailto:info@randheerjibabal.org" className="text-gray-400 hover:text-white transition-colors">info@randheerjibabal.org</a>
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined notranslate text-accent-gold">schedule</span>
@@ -87,7 +87,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
           <div className="text-center md:text-left">
-            <p>© {new Date().getFullYear()} संत श्री रणधीर जी बाबल सेवा संस्थान। सर्वाधिकार सुरक्षित।</p>
+            <p>© {new Date().getFullYear()} संत श्री रणधीर जी <span className="notranslate">बाबल</span> सेवा संस्थान। सर्वाधिकार सुरक्षित。</p>
             <p className="mt-2 text-[10px] opacity-70">
               Design and Developed by <a href="https://binary29.com/" target="_blank" rel="noopener noreferrer" className="text-accent-gold hover:text-white transition-colors">Binary29</a>
             </p>

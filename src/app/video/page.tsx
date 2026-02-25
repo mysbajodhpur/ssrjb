@@ -26,7 +26,7 @@ const VideoPage = () => {
                             जीवन दर्शन: <span className="text-accent-gold">documentary</span>
                         </h1>
                         <p className="text-xl text-gray-400 max-w-2xl leading-relaxed">
-                            संत श्री रणधीर जी बाबल की आध्यात्मिक यात्रा, समाज सुधार के कार्य और पर्यावरण संरक्षण के प्रति उनके अटूट प्रेम की एक झलक।
+                            संत श्री रणधीर जी <span className="notranslate">बाबल</span> की आध्यात्मिक यात्रा, समाज सुधार के कार्य और पर्यावरण संरक्षण के प्रति उनके अटूट प्रेम की एक झलक।
                         </p>
                     </div>
 
@@ -50,7 +50,7 @@ const VideoPage = () => {
                         <div className="space-y-4">
                             <h3 className="text-xl font-bold font-display text-accent-gold">About the Film</h3>
                             <p className="text-gray-400 leading-relaxed">
-                                यह फिल्म संत बाबल जी के जीवन के स्वर्णिम पलों, उनकी शिक्षाओं और बाबल परिवार के ऐतिहासिक संघर्षों को एक साथ पिरोती है।
+                                यह फिल्म संत <span className="notranslate">बाबल</span> जी के जीवन के स्वर्णिम पलों, उनकी शिक्षाओं और <span className="notranslate">बाबल</span> परिवार के ऐतिहासिक संघर्षों को एक साथ पिरोती है।
                             </p>
                         </div>
                         <div className="space-y-4 text-center">

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import { FormatBabal } from './FormatBabal';
 import { historyData } from '@/data/history';
 
 const HistoryFullReader = () => {
@@ -49,7 +50,7 @@ const HistoryFullReader = () => {
 
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg mb-12 text-justify whitespace-pre-wrap">
-              {activeChapter.content}
+              <FormatBabal text={activeChapter.content} />
             </p>
 
             {activeChapter.aarti && (

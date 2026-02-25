@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import Link from "next/link";
 import { servicesData } from "@/data/services";
+import { FormatBabal } from "@/components/FormatBabal";
 
 export const metadata: Metadata = {
   title: "हमारी पहल - शिक्षा, स्वास्थ्य और पर्यावरण",
@@ -63,11 +64,11 @@ export default function Services() {
                                     </span>
                                 </div>
                                 
-                                <h3 className="text-2xl font-bold mb-3 font-display text-white">{service.title}</h3>
+                                <h3 className="text-2xl font-bold mb-3 font-display text-white"><FormatBabal text={service.title} /></h3>
                                 
                                 {/* Reveal Text */}
                                 <p className="text-gray-300 leading-relaxed mb-6 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 max-h-0 group-hover:max-h-32 overflow-hidden">
-                                    {service.description}
+                                    <FormatBabal text={service.description} />
                                 </p>
                                 
                                 <Link href={`/services/${service.slug}`} className="text-accent-gold font-bold flex items-center gap-2 transition-all text-sm uppercase tracking-wider hover:gap-3">

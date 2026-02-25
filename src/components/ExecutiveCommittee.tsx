@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { teamData } from '@/data/team';
+import { FormatBabal } from './FormatBabal';
 
 const ExecutiveCommittee = () => {
     const { executiveCommittee } = teamData;
@@ -60,15 +61,15 @@ const ExecutiveCommittee = () => {
                                             {/* Text Content - Smaller Typography */}
                                             <div className="flex-1">
                                                 <h4 className="text-base md:text-lg font-bold text-[#0d1b1c] dark:text-white leading-tight mb-0.5">
-                                                    {member.name}
+                                                    <FormatBabal text={member.name} />
                                                 </h4>
                                                 <p className="text-gray-500 dark:text-gray-400 text-[10px] md:text-xs font-medium">
-                                                    {member.location}
+                                                    <FormatBabal text={member.location || ""} />
                                                 </p>
                                                 {/* Optional: Show role if it's not obvious from category */}
                                                 {(member.role !== 'उपाध्यक्ष' && member.role !== 'सचिव') && (
                                                     <span className="text-[9px] text-accent-gold font-bold uppercase tracking-wider mt-0.5 block">
-                                                        {member.role}
+                                                        <FormatBabal text={member.role || ""} />
                                                     </span>
                                                 )}
                                             </div>

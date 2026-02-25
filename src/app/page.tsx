@@ -57,7 +57,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80"></div>
               <div className="absolute bottom-8 left-8 text-white z-20">
                 <p className="text-xs uppercase tracking-widest font-bold text-accent-gold mb-2">संस्थापक</p>
-                <p className="font-display text-xl font-bold">संत श्री रणधीर जी बाबल</p>
+                <p className="font-display text-xl font-bold">संत श्री रणधीर जी <span className="notranslate">बाबल</span></p>
                 <p className="text-xs text-gray-300 mt-1">गुरु जाम्भोजी के शिष्य • जन्म १५१३ ई.</p>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function Home() {
           <div className="order-1 lg:order-2">
             <h2 className="text-primary dark:text-accent-gold uppercase tracking-widest font-bold text-xs mb-3">हमारी धरोहर</h2>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0d1b1c] dark:text-white mb-6 leading-tight font-display">
-              बाबलसर, १५१३ ई. से चली आ रही <br/>
+              <span className="notranslate">बाबलसर</span>, १५१३ ई. से चली आ रही <br/>
               <span className="text-primary dark:text-gray-300">एक आध्यात्मिक विरासत</span>
             </h2>
             
@@ -76,10 +76,10 @@ export default function Home() {
             </div>
 
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
-              संत श्री रणधीर जी बाबल बिश्नोई पंथ के संस्थापक <strong>गुरु जाम्भोजी</strong> के परम शिष्य थे। 1513 ई. में बाबलसर गांव में जन्मे, उन्होंने अपना जीवन पर्यावरण संरक्षण, जीव दया और आध्यात्मिक जागृति के लिए समर्पित कर दिया।
+              संत श्री रणधीर जी <span className="notranslate">बाबल</span> बिश्नोई पंथ के संस्थापक <strong>गुरु जाम्भोजी</strong> के परम शिष्य थे। 1513 ई. में <span className="notranslate">बाबलसर</span> गांव में जन्मे, उन्होंने अपना जीवन पर्यावरण संरक्षण, जीव दया और आध्यात्मिक जागृति के लिए समर्पित कर दिया।
             </p>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-10">
-              आज, <strong>संत श्री रणधीर जी बाबल सेवा संस्थान</strong>, <strong>अध्यक्ष श्री रमेश बाबल</strong> के नेतृत्व में, शिक्षा, स्वास्थ्य और वृक्षारोपण अभियानों के माध्यम से इसी 500 साल पुरानी परंपरा को आगे बढ़ा रहा है।
+              आज, <strong>संत श्री रणधीर जी <span className="notranslate">बाबल</span> सेवा संस्थान</strong>, <strong>अध्यक्ष श्री रमेश <span className="notranslate">बाबल</span></strong> के नेतृत्व में, शिक्षा, स्वास्थ्य और वृक्षारोपण अभियानों के माध्यम से इसी 500 साल पुरानी परंपरा को आगे बढ़ा रहा है।
             </p>
 
             <Link href="/about" className="inline-flex items-center gap-2 text-[#0b2b30] dark:text-accent-gold font-bold uppercase tracking-wider text-sm hover:gap-4 transition-all">

@@ -3,6 +3,7 @@ export const siteConfig = {
     name: "Sant Shree Randheer Ji Babal Seva Sansthan",
     shortName: "SSRJB Seva Sansthan",
     description: "A spiritual and social service organization carried forward by the legacy of Sant Shree Randheer Ji Babal (Disciple of Guru Jambhoji, born 1513 AD). Dedicated to Education, Health, Sanskar, and Environment.",
+    email: "info@randheerjibabal.org",
     url: "https://randheerseva.org", // Placeholder URL
     ogImage: "https://randheerseva.org/og-image.jpg",
     links: {

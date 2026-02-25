@@ -3,6 +3,7 @@
 
 import React from 'react';
 import { teamData } from '@/data/team';
+import { FormatBabal } from './FormatBabal';
 
 const MentorshipBoard = () => {
     return (
@@ -34,11 +35,11 @@ const MentorshipBoard = () => {
                                 </div>
                                 <div>
                                     <p className="font-bold text-[#0d1b1c] dark:text-white text-lg leading-tight">
-                                        {mentor.name}
+                                        <FormatBabal text={mentor.name} />
                                     </p>
                                     {(mentor.location || mentor.details) && (
                                         <p className="text-accent-gold font-bold text-[10px] md:text-xs uppercase tracking-widest mt-1">
-                                            {mentor.location || mentor.details}
+                                            <FormatBabal text={mentor.location || mentor.details || ""} />
                                         </p>
                                     )}
                                 </div>

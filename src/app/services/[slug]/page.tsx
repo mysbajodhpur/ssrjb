@@ -8,6 +8,7 @@ import Link from "next/link";
 import { servicesData } from "@/data/services";
 import { completedWorks, upcomingProjects, WorkItem } from "@/data/works";
 import ContributionSection from "@/components/ContributionSection";
+import { FormatBabal } from "@/components/FormatBabal";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -73,13 +74,13 @@ export default async function ServiceDetail({ params }: Props) {
              
              <div className="relative z-10 container mx-auto px-6 text-center">
                  <span className="inline-block px-4 py-1 mb-6 border border-accent-gold/50 rounded-full text-accent-gold text-xs font-bold uppercase tracking-[0.2em] backdrop-blur-sm">
-                    {service.tagline}
+                    <FormatBabal text={service.tagline} />
                  </span>
                  <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 drop-shadow-2xl">
-                    {service.title}
+                    <FormatBabal text={service.title} />
                  </h1>
                  <p className="text-xl text-gray-200 font-light max-w-3xl mx-auto leading-relaxed">
-                    {service.description}
+                    <FormatBabal text={service.description} />
                  </p>
              </div>
         </section>
@@ -100,8 +101,8 @@ export default async function ServiceDetail({ params }: Props) {
                                 <span className="material-symbols-outlined notranslate text-4xl text-accent-gold/40 mb-4 group-hover:scale-110 group-hover:text-accent-gold transition-all">
                                     {work.icon || 'star'}
                                 </span>
-                                <h3 className="text-xl font-bold text-[#0d1b1c] dark:text-white mb-2 font-display">{work.title}</h3>
-                                {work.description && <p className="text-gray-600 dark:text-gray-400 text-sm">{work.description}</p>}
+                                <h3 className="text-xl font-bold text-[#0d1b1c] dark:text-white mb-2 font-display"><FormatBabal text={work.title} /></h3>
+                                {work.description && <p className="text-gray-600 dark:text-gray-400 text-sm"><FormatBabal text={work.description} /></p>}
                                 {work.location && <p className="text-accent-gold text-xs mt-4 uppercase tracking-widest font-bold">स्थान: {work.location}</p>}
                             </div>
                         ))}
@@ -123,8 +124,8 @@ export default async function ServiceDetail({ params }: Props) {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         {relatedUpcoming.map((project) => (
                             <div key={project.id} className="bg-white dark:bg-[#1a2024] p-8 rounded-3xl border-l-4 border-l-accent-gold shadow-sm hover:shadow-md transition-all">
-                                <h3 className="text-xl font-bold text-[#0d1b1c] dark:text-white mb-2 font-display">{project.title}</h3>
-                                {project.description && <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{project.description}</p>}
+                                <h3 className="text-xl font-bold text-[#0d1b1c] dark:text-white mb-2 font-display"><FormatBabal text={project.title} /></h3>
+                                {project.description && <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed"><FormatBabal text={project.description} /></p>}
                                 {project.location && <p className="text-accent-gold text-xs mt-4 uppercase tracking-widest font-bold">प्रस्तावित स्थान: {project.location}</p>}
                             </div>
                         ))}

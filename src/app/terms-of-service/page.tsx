@@ -28,7 +28,7 @@ export default function TermsOfService() {
 
             <h3 className="text-[#0b2b30] dark:text-accent-gold font-display mt-8 mb-4 text-2xl font-bold">2. उपयोग लाइसेंस</h3>
             <p>
-              संत श्री रणधीर जी बाबल सेवा संस्थान की वेबसाइट पर सामग्री (जानकारी या सॉफ़्टवेयर) की एक प्रति केवल व्यक्तिगत, गैर-व्यावसायिक क्षणिक देखने के लिए अस्थायी रूप से डाउनलोड करने की अनुमति दी गई है। यह लाइसेंस का अनुदान है, शीर्षक का हस्तांतरण नहीं है, और इस लाइसेंस के तहत आप यह नहीं कर सकते:
+              संत श्री रणधीर जी <span className="notranslate">बाबल</span> सेवा संस्थान की वेबसाइट पर सामग्री (जानकारी या सॉफ़्टवेयर) की एक प्रति केवल व्यक्तिगत, गैर-व्यावसायिक क्षणिक देखने के लिए अस्थायी रूप से डाउनलोड करने की अनुमति दी गई है। यह लाइसेंस का अनुदान है, शीर्षक का हस्तांतरण नहीं है, और इस लाइसेंस के तहत आप यह नहीं कर सकते:
             </p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
               <li>सामग्री को संशोधित या कॉपी करना;</li>
@@ -40,7 +40,7 @@ export default function TermsOfService() {
 
             <h3 className="text-[#0b2b30] dark:text-accent-gold font-display mt-8 mb-4 text-2xl font-bold">3. अस्वीकरण</h3>
             <p>
-              संत श्री रणधीर जी बाबल सेवा संस्थान की वेबसाइट पर सामग्री 'जैसी है' के आधार पर प्रदान की जाती है। हम कोई वारंटी, व्यक्त या निहित नहीं करते हैं, और एतद्द्वारा अन्य सभी वारंटी को अस्वीकार और नकारते हैं, जिसमें बिना किसी सीमा के, निहित वारंटी या व्यापारिक योग्यता की शर्तें, किसी विशेष उद्देश्य के लिए उपयुक्तता, या बौद्धिक संपदा का गैर-उल्लंघन या अधिकारों का अन्य उल्लंघन शामिल है।
+              संत श्री रणधीर जी <span className="notranslate">बाबल</span> सेवा संस्थान की वेबसाइट पर सामग्री 'जैसी है' के आधार पर प्रदान की जाती है। हम कोई वारंटी, व्यक्त या निहित नहीं करते हैं, और एतद्द्वारा अन्य सभी वारंटी को अस्वीकार और नकारते हैं, जिसमें बिना किसी सीमा के, निहित वारंटी या व्यापारिक योग्यता की शर्तें, किसी विशेष उद्देश्य के लिए उपयुक्तता, या बौद्धिक संपदा का गैर-उल्लंघन या अधिकारों का अन्य उल्लंघन शामिल है।
             </p>
 
             <h3 className="text-[#0b2b30] dark:text-accent-gold font-display mt-8 mb-4 text-2xl font-bold">4. शासी कानून</h3>
@@ -51,7 +51,7 @@ export default function TermsOfService() {
             <h3 className="text-[#0b2b30] dark:text-accent-gold font-display mt-8 mb-4 text-2xl font-bold">5. संपर्क करें</h3>
             <p>यदि इन शर्तों के बारे में आपके कोई प्रश्न हैं, तो कृपया हमसे संपर्क करें:</p>
              <p className="font-bold mt-2">
-              ईमेल: <a href="mailto:bishnoi.ramesh@gmail.com" className="text-accent-gold hover:underline">bishnoi.ramesh@gmail.com</a>
+              ईमेल: <a href="mailto:info@randheerjibabal.org" className="text-accent-gold hover:underline">info@randheerjibabal.org</a>
             </p>
           </div>
         </div>

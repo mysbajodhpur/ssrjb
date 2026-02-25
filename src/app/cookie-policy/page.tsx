@@ -45,7 +45,7 @@ export default function CookiePolicy() {
             <h3 className="text-[#0b2b30] dark:text-accent-gold font-display mt-8 mb-4 text-2xl font-bold">संपर्क करें</h3>
             <p>यदि कुकीज़ के हमारे उपयोग के बारे में आपके कोई प्रश्न हैं, तो कृपया हमसे संपर्क करें:</p>
              <p className="font-bold mt-2">
-              ईमेल: <a href="mailto:bishnoi.ramesh@gmail.com" className="text-accent-gold hover:underline">bishnoi.ramesh@gmail.com</a>
+              ईमेल: <a href="mailto:info@randheerjibabal.org" className="text-accent-gold hover:underline">info@randheerjibabal.org</a>
             </p>
           </div>
         </div>

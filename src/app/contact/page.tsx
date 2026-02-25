@@ -44,7 +44,7 @@ export default function Contact() {
         <section className="px-6 -mt-20 relative z-20 pb-20">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: "mail", title: "ईमेल करें", desc: "सामान्य पूछताछ, दान या प्रतिक्रिया के लिए।", link: "mailto:bishnoi.ramesh@gmail.com", linkText: "bishnoi.ramesh@gmail.com" },
+              { icon: "mail", title: "ईमेल करें", desc: "सामान्य पूछताछ, दान या प्रतिक्रिया के लिए।", link: "mailto:info@randheerjibabal.org", linkText: "info@randheerjibabal.org" },
               { icon: "call", title: "कॉल करें", desc: "तत्काल सहायता के लिए हमारे स्वयंसेवकों से बात करें।", link: "tel:+919818757905", linkText: "+91 98187 57905" },
               { icon: "location_on", title: "पधारें", desc: "हमारा मुख्य कार्यालय", text: "मुख्यालय श्री जम्भेश्वर भगवान मंदिर,फिटकासनी, जिला जोधपुर, राजस्थान" }
             ].map((item, index) => (

@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
 
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <p>
-              संत श्री रणधीर जी बाबल सेवा संस्थान ("हम," "हमारा," या "हमें") आपकी गोपनीयता की रक्षा के लिए प्रतिबद्ध है। यह गोपनीयता नीति बताती है कि एसएसआरजेबी सेवा संस्थान द्वारा आपकी व्यक्तिगत जानकारी कैसे एकत्र, उपयोग और प्रकट की जाती है।
+              संत श्री रणधीर जी <span className="notranslate">बाबल</span> सेवा संस्थान ("हम," "हमारा," या "हमें") आपकी गोपनीयता की रक्षा के लिए प्रतिबद्ध है। यह गोपनीयता नीति बताती है कि एसएसआरजेबी सेवा संस्थान द्वारा आपकी व्यक्तिगत जानकारी कैसे एकत्र, उपयोग और प्रकट की जाती है।
             </p>
             <p>
               यह गोपनीयता नीति हमारी वेबसाइट और इसके संबंधित उपडोमेन (सामूहिक रूप से, हमारी "सेवा") पर लागू होती है। हमारी सेवा तक पहुँचने या उसका उपयोग करने से, आप यह संकेत देते हैं कि आपने इस गोपनीयता नीति में वर्णित अनुसार हमारी व्यक्तिगत जानकारी के संग्रह, भंडारण, उपयोग और प्रकटीकरण को पढ़, समझ और स्वीकार कर लिया है।
@@ -61,10 +61,10 @@ export default function PrivacyPolicy() {
             <h3 className="text-[#0b2b30] dark:text-accent-gold font-display mt-8 mb-4 text-2xl font-bold">5. संपर्क करें</h3>
             <p>यदि इस गोपनीयता नीति के बारे में आपके कोई प्रश्न हैं, तो कृपया हमसे संपर्क करें:</p>
             <p className="font-bold mt-2">
-              संत श्री रणधीर जी बाबल सेवा संस्थान<br/>
+              संत श्री रणधीर जी <span className="notranslate">बाबल</span> सेवा संस्थान<br/>
               मुख्यालय श्री जम्भेश्वर भगवान मंदिर,<br/>
               फिटकासनी, जिला जोधपुर, राजस्थान<br/>
-              ईमेल: <a href="mailto:bishnoi.ramesh@gmail.com" className="text-accent-gold hover:underline">bishnoi.ramesh@gmail.com</a>
+              ईमेल: <a href="mailto:info@randheerjibabal.org" className="text-accent-gold hover:underline">info@randheerjibabal.org</a>
             </p>
           </div>
         </div>
