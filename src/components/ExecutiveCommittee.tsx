@@ -5,10 +5,19 @@ import React from 'react';
 import { teamData } from '@/data/team';
 import { FormatBabal } from './FormatBabal';
 
+interface CommitteeMember {
+    name: string;
+    role: string;
+    image: string;
+    location?: string;
+    description?: string;
+}
+
 const ExecutiveCommittee = () => {
     const { executiveCommittee } = teamData;
 
     const sections = [
+        { title: 'अध्यक्ष एवं संरक्षक (President)', data: executiveCommittee.presidents },
         { title: 'उपाध्यक्ष (Vice Presidents)', data: executiveCommittee.vicePresidents },
         { title: 'प्रधान पदाधिकारी (Key Office Bearers)', data: executiveCommittee.keyBearers },
         { title: 'सचिव एवं अन्य पदाधिकारी (Secretaries & Others)', data: executiveCommittee.secretaries },
@@ -37,8 +46,12 @@ const ExecutiveCommittee = () => {
                                     </h3>
                                 </div>
 
-                                <div className={`grid grid-cols-1 md:grid-cols-2 ${isTriple ? 'lg:grid-cols-3' : 'lg:grid-cols-4'} gap-6`}>
-                                    {section.data.map((member, index) => (
+                                <div className={`grid grid-cols-1 md:grid-cols-2 ${
+                                    section.data.length <= 2 ? 'lg:grid-cols-2' :
+                                    section.data.length === 3 ? 'lg:grid-cols-3' : 
+                                    'lg:grid-cols-4'
+                                } gap-6`}>
+                                    {(section.data as CommitteeMember[]).map((member, index) => (
                                         <div 
                                             key={index} 
                                             className="bg-white dark:bg-[#1a2024] rounded-3xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-5 border border-gray-100 dark:border-gray-800"
@@ -63,14 +76,21 @@ const ExecutiveCommittee = () => {
                                                 <h4 className="text-base md:text-lg font-bold text-[#0d1b1c] dark:text-white leading-tight mb-0.5">
                                                     <FormatBabal text={member.name} />
                                                 </h4>
-                                                <p className="text-gray-500 dark:text-gray-400 text-[10px] md:text-xs font-medium">
-                                                    <FormatBabal text={member.location || ""} />
-                                                </p>
+                                                {member.location && (
+                                                    <p className="text-gray-500 dark:text-gray-400 text-[10px] md:text-xs font-medium">
+                                                        <FormatBabal text={member.location} />
+                                                    </p>
+                                                )}
                                                 {/* Optional: Show role if it's not obvious from category */}
-                                                {(member.role !== 'उपाध्यक्ष' && member.role !== 'सचिव') && (
+                                                {(member.role && member.role !== 'उपाध्यक्ष' && member.role !== 'सचिव') && (
                                                     <span className="text-[9px] text-accent-gold font-bold uppercase tracking-wider mt-0.5 block">
-                                                        <FormatBabal text={member.role || ""} />
+                                                        <FormatBabal text={member.role} />
                                                     </span>
+                                                )}
+                                                {member.description && (
+                                                    <p className="text-gray-600 dark:text-gray-400 text-[10px] md:text-xs mt-1 leading-snug">
+                                                        <FormatBabal text={member.description} />
+                                                    </p>
                                                 )}
                                             </div>
                                         </div>

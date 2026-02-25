@@ -17,13 +17,6 @@ export const teamData = {
             image: '/images/randheer-ji.jpg',
             description: 'गुरु जाम्भोजी के पाटवी शिष्य जिन्होंने मानवता की सेवा के लिए संस्थान की नींव रखी।'
         },
-        {
-            id: 'rameshbabal',
-            name: 'अध्यक्ष श्री रमेश बाबल',
-            title: 'वर्तमान अध्यक्ष एवं संरक्षक',
-            image: '/images/ramesh-babal.png',
-            description: 'संस्थान के वर्तमान नेतृत्वकर्ता जो 500 साल पुरानी विरासत को आधुनिक युग में आगे बढ़ा रहे हैं।'
-        }
     ],
 
     margdarshakMandal: [
@@ -44,6 +37,14 @@ export const teamData = {
     ],
 
     executiveCommittee: {
+        presidents: [
+            {
+                name: 'अध्यक्ष श्री रमेश बाबल',
+                role: 'वर्तमान अध्यक्ष एवं संरक्षक',
+                image: '/images/ramesh-babal.png',
+                description: 'संस्थान के वर्तमान नेतृत्वकर्ता जो 500 साल पुरानी विरासत को आधुनिक युग में आगे बढ़ा रहे हैं।'
+            }
+        ],
         vicePresidents: [
             {
                 name: 'बाबू राम',
