@@ -24,7 +24,7 @@ const ExecutiveCommittee = () => {
     ];
 
     return (
-        <section className="py-24 px-6 md:px-12 bg-[#f8fafb] dark:bg-black/20">
+        <section className="py-12 px-6 md:px-12 bg-[#f8fafb] dark:bg-black/20">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-20">
                     <span className="text-accent-gold font-bold uppercase tracking-[0.3em] text-xs mb-4 block underline underline-offset-8 decoration-accent-gold/30">कार्यकारिणी</span>
