@@ -23,7 +23,7 @@ export default function Services() {
            <div 
              className="absolute inset-0 bg-cover bg-center" 
              style={{
-               backgroundImage: 'linear-gradient(rgba(11, 43, 48, 0.90), rgba(11, 43, 48, 0.98)), url("/images/gallery-img-17.jpeg")'
+               backgroundImage: 'linear-gradient(rgba(11, 43, 48, 0.90), rgba(11, 43, 48, 0.98)), url("/images/463484571_8546353255443958_4588912091064799768_n.jpg")'
              }}
            ></div>
            <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -82,6 +82,7 @@ export default function Services() {
 
         {/* CTA Section (Gold Theme) */}
         <CTASection 
+          bgImage="/images/gallery-img-12.jpeg"
           title="बदलाव लाने के लिए प्रेरित हैं?"
           description="आपका समर्थन इन पहलों को बढ़ावा दे सकता है और अनगिनत जीवन में प्रकाश ला सकता है। आज ही हमसे जुड़ें।"
           primaryBtnText="एक नेक काम का समर्थन करें"

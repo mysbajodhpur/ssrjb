@@ -29,7 +29,7 @@ const FamilyTree = () => {
               
               {/* Year/Era Badge (Left) */}
               <div className="absolute left-[-160px] top-[-5px] hidden md:block w-32 text-right">
-                <span className="text-accent-gold font-bold text-sm tracking-tighter notranslate">
+                <span className="text-accent-gold font-bold text-sm tracking-tighter">
                    {person.note?.match(/संवत् \d+/)?.[0] || person.village || ""}
                 </span>
               </div>
@@ -76,7 +76,7 @@ const FamilyTree = () => {
                   )}
 
                   {person.note && (
-                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed italic border-t border-gray-100 dark:border-gray-800 pt-4 mt-4 notranslate">
+                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed italic border-t border-gray-100 dark:border-gray-800 pt-4 mt-4">
                       {person.note}
                     </p>
                   )}

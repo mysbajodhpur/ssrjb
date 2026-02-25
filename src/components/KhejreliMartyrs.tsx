@@ -20,7 +20,7 @@ const KhejreliMartyrs = () => {
             <div className="w-8 h-px bg-accent-gold"></div>
           </div>
           <h2 className="text-4xl md:text-6xl font-display font-black mb-8">
-            <span className="notranslate">खेजड़ली</span> का <span className="text-accent-gold italic serif font-normal notranslate">खडाणा</span>
+            <span>खेजड़ली</span> का <span className="text-accent-gold italic serif font-normal">खडाणा</span>
           </h2>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed italic">
             "भादो सुदी दसवीं वि.स. 1787: अमृता देवी बिश्नोई के नेतृत्व में 363 बिश्नोई वीरों ने खेजड़ी वृक्षों की रक्षार्थ अपने प्राणों का बलिदान दिया। इसमें बाबल परिवार के 26 सदस्यों ने भी अपनी आहुति दी।"
@@ -35,8 +35,8 @@ const KhejreliMartyrs = () => {
                     <span className="material-symbols-outlined text-4xl notranslate">shield_moon</span>
                  </div>
                  <div>
-                    <h3 className="text-2xl font-bold font-display">शहीदों की नामावली</h3>
-                    <p className="text-accent-gold/80 font-medium">कुल 26 शहीद (23 पुरुष, 3 स्त्रियाँ)</p>
+                    <h3 className="text-2xl font-bold font-display notranslate">शहीदों की नामावली</h3>
+                    <p className="text-accent-gold/80 font-medium notranslate">कुल 26 शहीद (23 पुरुष, 3 स्त्रियाँ)</p>
                  </div>
               </div>
               <div className="px-6 py-3 rounded-full bg-accent-gold text-black font-bold uppercase tracking-widest text-xs">

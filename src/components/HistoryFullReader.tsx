@@ -23,7 +23,7 @@ const HistoryFullReader = () => {
                   : 'text-gray-400 hover:text-gray-600 dark:hover:text-gray-200'
               }`}
             >
-              <span className="notranslate">{chapter.title}</span>
+              <span>{chapter.title}</span>
               {activeTab === chapter.id && (
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent-gold rounded-full"></div>
               )}
@@ -43,7 +43,7 @@ const HistoryFullReader = () => {
             <span className="text-accent-gold font-bold uppercase tracking-widest text-xs">अध्याय {historyData.chapters.indexOf(activeChapter) + 1}</span>
           </div>
 
-          <h3 className="text-3xl md:text-5xl font-display font-black text-[#0d1b1c] dark:text-white mb-10 leading-tight notranslate">
+          <h3 className="text-3xl md:text-5xl font-display font-black text-[#0d1b1c] dark:text-white mb-10 leading-tight">
             {activeChapter.title}
           </h3>
 
@@ -58,7 +58,7 @@ const HistoryFullReader = () => {
                  <h4 className="text-accent-gold font-black text-xl mb-8 font-display uppercase tracking-widest">मूल आरती (नृसिंह आरती)</h4>
                  <div className="space-y-4">
                     {activeChapter.aarti.map((line, idx) => (
-                      <p key={idx} className="text-xl md:text-2xl font-serif font-medium text-[#0d1b1c] dark:text-gray-100 leading-snug notranslate">
+                      <p key={idx} className="text-xl md:text-2xl font-serif font-medium text-[#0d1b1c] dark:text-gray-100 leading-snug">
                         {line}
                       </p>
                     ))}

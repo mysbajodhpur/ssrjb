@@ -28,7 +28,7 @@ export default function About() {
           <div 
             className="absolute inset-0 bg-fixed bg-cover bg-center transition-transform duration-1000 scale-105" 
             style={{
-              backgroundImage: 'linear-gradient(rgba(11, 43, 48, 0.6), rgba(11, 43, 48, 0.8)), url("/images/gallery-img-10.jpeg")'
+              backgroundImage: 'linear-gradient(rgba(11, 43, 48, 0.6), rgba(11, 43, 48, 0.8)), url("/images/463397791_8546346878777929_5238208331993450471_n.jpg")'
             }}
           ></div>
           <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
@@ -241,6 +241,7 @@ export default function About() {
 
         {/* CTA Section */}
         <CTASection 
+            bgImage="/images/gallery-img-08.jpeg"
             title="हमारी सेवा विरासत में शामिल हों"
             description="500 साल पुरानी करुणा की परंपरा का हिस्सा बनें। आपका समर्थन हमें अधिक गांवों तक अपनी शैक्षिक और स्वास्थ्य सेवाओं का विस्तार करने में मदद कर सकता है।"
             primaryBtnText="हमारे मिशन का समर्थन करें"

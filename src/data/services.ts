@@ -6,7 +6,8 @@ export const servicesData = [
         icon: "school",
         title: "विद्या (शिक्षा एवं विकास)",
         tagline: "सशक्त मन, उज्ज्वल भविष्य",
-        heroImage: "/images/gallery-img-13.jpeg",
+        heroImage: "/images/463632836_8564986200247330_6261429639932591007_n.jpg",
+        ctaImage: "/images/gallery-img-01.jpeg",
         description: "संविधान के उद्देश्य (7, 9, 10) के अनुरूप, हमारा लक्ष्य बालक-बालिकाओं और महिलाओं के लिए शिक्षा का प्रसार करना, तथा विद्यालय, महाविद्यालय और छात्रावासों का संचालन करना है।",
         stats: [
             { value: "5000+", label: "छात्र लाभान्वित" },
@@ -49,7 +50,8 @@ export const servicesData = [
         icon: "medical_services",
         title: "निरोगी काया (स्वास्थ्य एवं चिकित्सा)",
         tagline: "पहला सुख निरोगी काया",
-        heroImage: "/images/gallery-img-14.jpeg",
+        heroImage: "/images/gallery-img-17.jpeg",
+        ctaImage: "/images/gallery-img-03.jpeg",
         description: "उद्देश्य (8, 11) के तहत, हम गरीब और पिछड़े वर्गों के उत्थान के लिए चिकित्सा सुविधाएं, स्वास्थ्य शिविर और खेती के विकास से संबंधित कार्य प्रदान करते हैं।",
         stats: [
             { value: "100+", label: "चिकित्सा शिविर" },
@@ -92,7 +94,8 @@ export const servicesData = [
         icon: "forest",
         title: "पर्यावरण (पारिस्थितिक संरक्षण)",
         tagline: "प्रकृति के रक्षक",
-        heroImage: "/images/gallery-img-15.jpeg",
+        heroImage: "/images/463750036_8546393675439916_8372784249833168757_n.jpg",
+        ctaImage: "/images/gallery-img-04.jpeg",
         description: "उद्देश्य (5) के अनुपालन में, हम पर्यावरण और पारिस्थितिक संरक्षण (Ecological Conservation) के लिए प्रतिबद्ध हैं। हम 'सिर साटे रूँख रहे' की परंपरा को जीवित रखते हैं।",
         stats: [
             { value: "1000+", label: "खेजड़ी वृक्षारोपण" },
@@ -135,7 +138,8 @@ export const servicesData = [
         icon: "self_improvement",
         title: "संस्कार एवं संस्कृति",
         tagline: "विचारधारा और विरासत",
-        heroImage: "/images/gallery-img-16.jpeg",
+        heroImage: "/images/463525988_8546360342109916_6232088923109567130_n.jpg",
+        ctaImage: "/images/gallery-img-06.jpeg",
         description: "उद्देश्य (1, 2, 3, 4, 6) के तहत, हम श्री जम्भेश्वर भगवान और संत रणधीर जी की विचारधारा का प्रचार, मेलों का आयोजन और वंशावली संरक्षण करते हैं।",
         stats: [
             { value: "वार्षिक", label: "मेला आयोजन" },
@@ -178,7 +182,8 @@ export const servicesData = [
         icon: "volunteer_activism",
         title: "अन्य जनहित कार्य",
         tagline: "नर सेवा नारायण सेवा",
-        heroImage: "/images/gallery-img-17.jpeg",
+        heroImage: "/images/463064164_8542622392483711_7718564485858990910_n.jpg",
+        ctaImage: "/images/gallery-img-07.jpeg",
         description: "उद्देश्य (13) के अंतर्गत, हम गौ सेवा, पक्षी सेवा और प्याऊ जैसी अन्य जनहितकारी गतिविधियों के माध्यम से सर्वकल्याण के लिए समर्पित हैं।",
         stats: [
             { value: "दैनिक", label: "गौ सेवा" },

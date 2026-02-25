@@ -11,6 +11,7 @@ interface CTASectionProps {
   primaryBtnLink?: string;
   secondaryBtnText?: string;
   secondaryBtnLink?: string;
+  bgImage?: string;
 }
 
 const CTASection: React.FC<CTASectionProps> = ({
@@ -19,7 +20,8 @@ const CTASection: React.FC<CTASectionProps> = ({
   primaryBtnText = "सहयोग राशि दान करें",
   primaryBtnLink = "/contact",
   secondaryBtnText,
-  secondaryBtnLink
+  secondaryBtnLink,
+  bgImage = "/images/gallery-img-02.jpeg"
 }) => {
   const [showDonationModal, setShowDonationModal] = useState(false);
 
@@ -72,7 +74,7 @@ const CTASection: React.FC<CTASectionProps> = ({
            <div 
             className="absolute inset-0 bg-cover bg-center" 
             style={{
-              backgroundImage: 'url("/images/gallery-img-02.jpeg")'
+              backgroundImage: `url("${bgImage}")`
             }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-r from-[#c5a059] to-transparent md:bg-gradient-to-t md:from-[#c5a059]/80 md:to-transparent mix-blend-multiply"></div>

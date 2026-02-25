@@ -15,11 +15,11 @@ const galleryItems = [
   { id: 7, title: "सत्संग", src: "/images/gallery-img-07.jpeg" },
   { id: 8, title: "पर्यावरण संरक्षण", src: "/images/gallery-img-08.jpeg" },
   { id: 9, title: "चिकित्सा सहायता", src: "/images/gallery-img-09.jpeg" },
-  { id: 10, title: "वृक्षारोपण", src: "/images/gallery-img-10.jpeg" },
-  { id: 11, title: "युवा विकास", src: "/images/gallery-img-11.jpeg" },
-  { id: 12, title: "स्वास्थ्य शिविर", src: "/images/gallery-img-12.jpeg" },
+  // { id: 10, title: "वृक्षारोपण", src: "/images/gallery-img-10.jpeg" },
+  // { id: 11, title: "युवा विकास", src: "/images/gallery-img-11.jpeg" },
+  // { id: 12, title: "स्वास्थ्य शिविर", src: "/images/gallery-img-12.jpeg" },
   { id: 13, title: "शैक्षणिक भ्रमण", src: "/images/gallery-img-13.jpeg" },
-  { id: 14, title: "राहत कार्य", src: "/images/gallery-img-14.jpeg" },
+  // { id: 14, title: "राहत कार्य", src: "/images/gallery-img-14.jpeg" },
   { id: 15, title: "सांस्कृतिक कार्यक्रम", src: "/images/gallery-img-15.jpeg" },
   { id: 16, title: "योग और ध्यान", src: "/images/gallery-img-16.jpeg" },
   { id: 17, title: "महिला सशक्तिकरण", src: "/images/gallery-img-17.jpeg" },
@@ -59,6 +59,8 @@ const galleryItems = [
   { id: 51, title: "संस्थान की गतिविधियाँ", src: "/images/480457462_995107789478562_954061808826555293_n.jpg" },
   { id: 52, title: "संस्थान की गतिविधियाँ", src: "/images/480688297_995107742811900_8824928019099309319_n.jpg" },
   { id: 53, title: "संस्थान की गतिविधियाँ", src: "/images/504920307_9998662953546307_3774481003850726145_n.jpg" },
+  { id: 54, title: "संस्थान की गतिविधियाँ", src: "/images/463653341_8546504708762146_7667201234104561838_n.jpg" },
+  { id: 55, title: "संस्थान की गतिविधियाँ", src: "/images/463750036_8546393675439916_8372784249833168757_n.jpg" },
 ];
 
 export default function GalleryClient() {
@@ -196,6 +198,7 @@ export default function GalleryClient() {
 
         {/* CTA Section */}
         <CTASection 
+            bgImage="/images/gallery-img-16.jpeg"
             title="अपनी कहानी साझा करें"
             description="क्या आपने हमारे कार्यक्रमों में भाग लिया है? हम आपके दृष्टिकोण को देखना और इसे अपने सामुदायिक अभिलेखागार में जोड़ना पसंद करेंगे।"
             primaryBtnText="संपर्क करें"

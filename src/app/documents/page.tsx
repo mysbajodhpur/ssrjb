@@ -128,6 +128,7 @@ export default function DocumentsPage() {
         )}
 
         <CTASection 
+            bgImage="/images/gallery-img-15.jpeg"
             title="अधिक जानकारी चाहिए?"
             description="यदि आपको किसी विशिष्ट दस्तावेज़ या जानकारी की आवश्यकता है, तो कृपया हमसे संपर्क करें।"
             primaryBtnText="संपर्क करें"

@@ -145,7 +145,7 @@ export default function Home() {
         <UpcomingProjects />
 
         {/* CTA Section */}
-        <CTASection />
+        <CTASection bgImage="/images/gallery-img-05.jpeg" />
       </main>
 
       <Footer />

@@ -138,6 +138,7 @@ export default async function ServiceDetail({ params }: Props) {
 
         {/* Replaced CTA Section */}
         <CTASection 
+            bgImage={service.ctaImage || "/images/gallery-img-14.jpeg"}
             title="परिवर्तन का हिस्सा बनें"
             description="500 वर्षों की इस पावन सेवा परंपरा से जुड़ें और समाज के उत्थान में अपना योगदान दें।"
             primaryBtnText="आज ही सहयोग करें"
