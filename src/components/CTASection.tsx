@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import DonationModal from './DonationModal';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface CTASectionProps {
   title?: string;
@@ -15,15 +16,20 @@ interface CTASectionProps {
 }
 
 const CTASection: React.FC<CTASectionProps> = ({
-  title = "आपका सहयोग, उज्ज्वल भविष्य",
-  description = "आपका हर योगदान आशा की एक किरण है। दान या सेवा के माध्यम से, आप आज किसी के चेहरे पर मुस्कान ला सकते हैं।",
-  primaryBtnText = "सहयोग राशि दान करें",
+  title,
+  description,
+  primaryBtnText,
   primaryBtnLink = "/contact",
   secondaryBtnText,
   secondaryBtnLink,
   bgImage = "/images/gallery-img-02.jpeg"
 }) => {
   const [showDonationModal, setShowDonationModal] = useState(false);
+  const { t } = useLanguage();
+
+  const displayTitle = title || t('ctaSection.title');
+  const displayDescription = description || t('ctaSection.description');
+  const displayPrimaryBtnText = primaryBtnText || t('ctaSection.primaryBtnText');
 
   // Check if the primary button should trigger the donation modal
   // We trigger it if the link is specifically for donation or if it's the default "/contact" 
@@ -38,15 +44,15 @@ const CTASection: React.FC<CTASectionProps> = ({
         
         <div className="w-full md:w-1/2 p-10 lg:p-20 text-[#0b2b30] relative z-10 flex flex-col justify-center">
           <h2 className="text-3xl lg:text-4xl font-black mb-6 font-display leading-tight">
-            {title.split('\n').map((line, i) => (
+            {displayTitle.split('\n').map((line, i) => (
               <React.Fragment key={i}>
                 {line}
-                {i < title.split('\n').length - 1 && <br />}
+                {i < displayTitle.split('\n').length - 1 && <br />}
               </React.Fragment>
             ))}
           </h2>
           <p className="text-base lg:text-lg text-[#0b2b30]/80 mb-10 leading-relaxed max-w-sm font-medium">
-            {description}
+            {displayDescription}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
              {isDonationTrigger ? (
@@ -54,11 +60,11 @@ const CTASection: React.FC<CTASectionProps> = ({
                  onClick={() => setShowDonationModal(true)}
                  className="px-8 py-3.5 rounded-full bg-[#0b2b30] text-white font-bold text-center hover:bg-white hover:text-[#0b2b30] transition-all shadow-lg hover:-translate-y-1"
                >
-                 {primaryBtnText}
+                 {displayPrimaryBtnText}
                </button>
              ) : (
                <Link href={primaryBtnLink} className="px-8 py-3.5 rounded-full bg-[#0b2b30] text-white font-bold text-center hover:bg-white hover:text-[#0b2b30] transition-all shadow-lg hover:-translate-y-1">
-                 {primaryBtnText}
+                 {displayPrimaryBtnText}
                </Link>
              )}
              

@@ -69,7 +69,7 @@ const VideoPlayerModal: React.FC<VideoPlayerModalProps> = ({ isOpen, onClose, vi
                 {/* Video Info Overlay (Responsive) */}
                 <div className="text-center px-4">
                     <h3 className="text-white text-base md:text-lg font-bold font-display tracking-wide uppercase leading-tight">
-                        संत श्री रणधीर जी <span className="notranslate">बाबल</span> <br className="md:hidden" />
+                        संत श्री रणधीर जी बाबल <br className="md:hidden" />
                         <span className="text-accent-gold">— जीवन दर्शन (Documentary)</span>
                     </h3>
                 </div>

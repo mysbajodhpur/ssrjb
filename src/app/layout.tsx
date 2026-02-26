@@ -1,7 +1,6 @@
 
 import type { Metadata } from "next";
 import { Poppins, Montserrat } from "next/font/google";
-import { cookies } from "next/headers";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -21,7 +20,7 @@ const montserrat = Montserrat({
 import { siteConfig } from "@/config/site";
 import BackToTop from "@/components/BackToTop";
 import FloatingVideoButton from "@/components/FloatingVideoButton";
-import GoogleTranslate from "@/components/GoogleTranslate";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
   title: {
@@ -65,33 +64,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = await cookies();
-  const googtrans = cookieStore.get('googtrans')?.value;
-  
-  // Determine language based on Google Translate cookie
-  // Format is usually /hi/en or /hi/hi
-  let lang = "hi";
-  if (googtrans && googtrans.includes('/en')) {
-    lang = "en";
-  }
-
   return (
-    <html lang={lang} className={`${poppins.variable} ${montserrat.variable}`}>
+    <html lang="hi" className={`${poppins.variable} ${montserrat.variable}`}>
        <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body
         className="font-sans bg-background-light dark:bg-background-dark text-text-main dark:text-gray-100 antialiased"
       >
-        <GoogleTranslate />
-        {children}
-        <FloatingVideoButton />
-        <BackToTop />
+        <LanguageProvider>
+          {children}
+          <FloatingVideoButton />
+          <BackToTop />
+        </LanguageProvider>
       </body>
     </html>
   );

@@ -4,36 +4,32 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
+import { useLanguage } from "@/context/LanguageContext";
 
-const documents = [
+const documentsBase = [
   { 
     id: 1, 
-    title: "सहकारिता विभाग / COOPERATIVE DEPARTMENT", 
     fileName: "1.pdf", 
-    desc: "रजिस्ट्रीकरण प्रमाण-पत्र / REGISTRATION CERTIFICATE" 
   },
   { 
     id: 2, 
-    title: "सहकारिता विभाग / COOPERATIVE DEPARTMENT", 
     fileName: "2.pdf", 
-    desc: "कार्यकारिणी प्रमाण पत्र / EXECUTIVE COMMITTEE CERTIFICATE" 
   },
   { 
     id: 3, 
-    title: "संघ विधान पत्र", 
     fileName: "3.pdf", 
-    desc: "श्री जम्भेश्वर भगवान् मन्दिर, फिटकासनी, जिला जोधपुर (राजस्थान)" 
   },
   { 
     id: 4, 
-    title: "संघ विधान नियमावली", 
     fileName: "4.pdf", 
-    desc: "श्री जम्भेश्वर भगवान् मन्दिर, फिटकासनी, जिला जोधपुर (राजस्थान)" 
   },
 ];
 
 export default function DocumentsPage() {
+  const { t } = useLanguage();
   const [selectedDoc, setSelectedDoc] = React.useState<string | null>(null);
+
+  const docsTranslations = t('documentsPage.docs', true) || {};
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-[#0b1214]">
@@ -50,10 +46,10 @@ export default function DocumentsPage() {
 
              <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
                  <span className="inline-block px-4 py-1 mb-6 border border-accent-gold/50 rounded-full text-accent-gold text-xs font-bold uppercase tracking-[0.2em] backdrop-blur-sm">
-                    सूचना केंद्र
+                    {t('documentsPage.badge')}
                  </span>
                  <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-6 drop-shadow-lg">
-                    महत्वपूर्ण <span className="text-accent-gold italic font-serif">दस्तावेज़</span>
+                    {t('documentsPage.title1')} <span className="text-accent-gold italic font-serif">{t('documentsPage.title2')}</span>
                  </h1>
              </div>
         </section>
@@ -62,15 +58,15 @@ export default function DocumentsPage() {
         <section className="py-20 px-6 md:px-20 bg-gray-50 dark:bg-[#0e1214]">
              <div className="max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {documents.map((doc) => (
+                    {documentsBase.map((doc) => (
                         <div key={doc.id} className="bg-white dark:bg-[#1a1f22] p-8 rounded-xl shadow-sm hover:shadow-xl border border-gray-100 dark:border-white/5 transition-all duration-300 group">
                             <div className="flex items-start gap-4 mb-6">
                                 <div className="w-12 h-12 bg-red-100 dark:bg-red-900/20 rounded-lg flex items-center justify-center text-red-600 dark:text-red-400">
                                     <span className="material-symbols-outlined text-2xl">picture_as_pdf</span>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-accent-gold transition-colors">{doc.title}</h3>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">{doc.desc}</p>
+                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1 group-hover:text-accent-gold transition-colors">{(docsTranslations[doc.id] || {}).title || ""}</h3>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">{(docsTranslations[doc.id] || {}).desc || ""}</p>
                                 </div>
                             </div>
                             
@@ -78,7 +74,7 @@ export default function DocumentsPage() {
                                 onClick={() => setSelectedDoc(doc.fileName)}
                                 className="inline-flex items-center justify-between w-full px-4 py-3 bg-gray-50 dark:bg-white/5 rounded-lg text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-accent-gold hover:text-[#0b2b30] transition-all group-hover:pl-6 cursor-pointer"
                             >
-                                अभी देखें
+                                {t('documentsPage.viewNow')}
                                 <span className="material-symbols-outlined text-lg">visibility</span>
                             </button>
                         </div>
@@ -129,9 +125,9 @@ export default function DocumentsPage() {
 
         <CTASection 
             bgImage="/images/gallery-img-15.jpeg"
-            title="अधिक जानकारी चाहिए?"
-            description="यदि आपको किसी विशिष्ट दस्तावेज़ या जानकारी की आवश्यकता है, तो कृपया हमसे संपर्क करें।"
-            primaryBtnText="संपर्क करें"
+            title={t('documentsPage.cta.title')}
+            description={t('documentsPage.cta.desc')}
+            primaryBtnText={t('documentsPage.cta.btn')}
             primaryBtnLink="/contact"
         />
 

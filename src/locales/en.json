@@ -1,0 +1,957 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about": "About Us",
+        "services": "Services",
+        "leadership": "Leadership",
+        "gallery": "Gallery",
+        "documents": "Documents",
+        "contact": "Contact",
+        "donate": "Donate"
+    },
+    "footer": {
+        "title": "Sant Shree Randheer Ji Babal Service Institute",
+        "description": "Carrying forward the 500-year-old legacy of Sant Shree Randheer Ji Babal, dedicated to education, health, and environmental protection.",
+        "quickLinks": "Quick Links",
+        "contactUs": "Contact Us",
+        "social": "Connect With Us",
+        "copyright": "All rights reserved.",
+        "developerPrefix": "Developed by",
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "gallery": "Gallery",
+        "contact": "Contact",
+        "terms": "Terms of Service",
+        "privacy": "Privacy Policy",
+        "addressInfo": "HQ Shri Jambheshwar Bhagwan Mandir,<br/>Fitkasni, District Jodhpur, Rajasthan",
+        "timingInfo": "Daily: 09:00 AM - 06:00 PM",
+        "titlePart1": "Sant Shree Randheer Ji",
+        "titlePart2": "Babal",
+        "titlePart3": "Seva Sansthan"
+    },
+    "contact": {
+        "phone": "+91 98187 57905",
+        "email": "info@randheerjibabal.org",
+        "address": "Jodhpur, Rajasthan"
+    },
+    "ctaSection": {
+        "title": "Your Support, A Bright Future",
+        "description": "Your every contribution is a ray of hope. Through donation or service, you can bring a smile to someone's face today.",
+        "primaryBtnText": "Donate Now"
+    },
+    "home": {
+        "hero": {
+            "estBadge": "Est. 1513 AD • Babalsar",
+            "heading1": "Serving Humanity,",
+            "heading2": "Preserving Nature",
+            "founderName": "Sant Shree Randheer Ji Babal",
+            "subtitle": " Carrying forward the divine legacy. Dedicated to education, health, culture, and environmental protection.",
+            "joinMission": "Join Our Mission",
+            "ourHistory": "Our History"
+        },
+        "stats": {
+            "years": "Glorious Years",
+            "construction": "Major Construction",
+            "planting": "Intensive Tree Planting",
+            "service": "Charity and Service"
+        },
+        "legacy": {
+            "founderLabel": "Founder",
+            "founderName": "Sant Shree Randheer Ji Babal",
+            "founderSub": "Disciple of Guru Jambhoji • Born 1513 AD",
+            "headingAccent": "Our Heritage",
+            "heading1": "Babalsar, dating back to 1513 AD",
+            "heading2": "A Spiritual Legacy",
+            "quote": "\"True worship of God is service to nature and humanity.\"",
+            "para1": "Sant Shree Randheer Ji Babal was the supreme disciple of <strong>Guru Jambhoji</strong>, the founder of the Bishnoi sect. Born in 1513 AD in Babalsar village, he dedicated his life to environmental protection, compassion for all living beings, and spiritual awakening.",
+            "para2": "Today, <strong>Sant Shree Randheer Ji Babal Seva Sansthan</strong>, under the leadership of <strong>Chairman Shri Ramesh Babal</strong>, is carrying forward this 500-year-old tradition through education, health, and tree plantation campaigns.",
+            "readHistory": "Read Full History"
+        },
+        "initiatives": {
+            "headingAccent": "Our Work",
+            "heading1": "Towards a positive change",
+            "heading2": "An Initiative",
+            "viewAll": "View All Services",
+            "learnMore": "Learn More"
+        }
+    },
+    "services": {
+        "vidya": {
+            "title": "Vidya (Education & Development)",
+            "description": "In line with objectives (7, 9, 10), we aim to spread education for boys, girls, and women, and operate schools, colleges, and hostels."
+        },
+        "nirogi-kaya": {
+            "title": "Nirogi Kaya (Health & Medicine)",
+            "description": "Under objectives (8, 11), we provide medical facilities, health camps, and agricultural development initiatives for the upliftment of the poor and marginalized."
+        },
+        "paryavaran": {
+            "title": "Paryavaran (Ecological Conservation)",
+            "description": "In compliance with objective (5), we are committed to environmental and ecological conservation. We keep the tradition of 'Sir Sate Roonkh Rahe' alive."
+        },
+        "sanskar": {
+            "title": "Sanskar & Culture",
+            "description": "Preservation and promotion of Bishnoi religion and Jambhani literature.",
+            "feature1": "Jambhani Katha Events",
+            "feature2": "Historical Literature Compilation",
+            "feature3": "Sati-Dadi Temple Management",
+            "tagline": "Ideology and Heritage"
+        },
+        "other": {
+            "title": "Other Public Welfare Work",
+            "description": "Under objective (13), we are dedicated to public welfare through activities like cow service, bird service, and drinking water facilities.",
+            "feature1": "Gaushala Support",
+            "feature2": "Bird Feeding Arrangements",
+            "feature3": "Public Water Coolers",
+            "tagline": "Service to Man is Service to God"
+        },
+        "education": {
+            "title": "Education",
+            "description": "Shaping the future of children through quality education and resources.",
+            "feature1": "Study Material Distribution",
+            "feature2": "Scholarship Programs",
+            "feature3": "Library Construction",
+            "tagline": "Empowered Minds, Bright Future"
+        },
+        "health": {
+            "title": "Health",
+            "description": "Providing accessible health services and medical camps in rural areas.",
+            "feature1": "Free Medical Camps",
+            "feature2": "Blood Donation Drives",
+            "feature3": "First Aid Training",
+            "tagline": "First Happiness is a Healthy Body"
+        },
+        "environment": {
+            "title": "Environment",
+            "description": "Reclaiming nature through afforestation and water conservation.",
+            "feature1": "Intensive Tree Plantation",
+            "feature2": "Water Tank Construction",
+            "feature3": "Parks and Drinking Water",
+            "tagline": "Protectors of Nature"
+        }
+    },
+    "contactPage": {
+        "hero": {
+            "badge": "Connect With Us",
+            "title1": "Contact",
+            "title2": "Us",
+            "subtitle": "Whether you want to donate, seek spiritual guidance, or just connect, our doors and hearts are always open for you."
+        },
+        "cards": {
+            "email": {
+                "title": "Email Us",
+                "desc": "For general inquiries, donations, or feedback."
+            },
+            "call": {
+                "title": "Call Us",
+                "desc": "Talk to our volunteers for immediate assistance."
+            },
+            "visit": {
+                "title": "Visit Us",
+                "desc": "Our Main Office",
+                "text": "Headquarters Shri Jambheshwar Bhagwan Temple, Fitkasni, District Jodhpur, Rajasthan"
+            }
+        },
+        "details": {
+            "timingTitle": "Meeting Hours",
+            "monFri": "Monday — Friday",
+            "monFriTime": "09:00 AM - 06:00 PM",
+            "sat": "Saturday",
+            "satTime": "10:00 AM - 04:00 PM",
+            "sun": "Sunday",
+            "sunTime": "Closed for individual service",
+            "note": "For administrative meetings, please contact by phone at least 24 hours prior to travel."
+        }
+    },
+    "contactForm": {
+        "title": "Send Us a Message",
+        "subtitle": "Fill out the form below and our dedicated team will get back to you within 24-48 hours. We value every interaction.",
+        "successTitle": "Message sent successfully!",
+        "successDesc": "We will contact you shortly. Check your email for confirmation.",
+        "errorTitle": "An error occurred",
+        "nameLabel": "Full Name",
+        "namePlaceholder": "Your Name",
+        "emailLabel": "Email Address",
+        "emailPlaceholder": "email@example.com",
+        "subjectLabel": "Subject",
+        "subjects": {
+            "general": "General Inquiry",
+            "gauSeva": "Gau Seva Support",
+            "edu": "Education / Scholarship Support",
+            "health": "Medical Camp / Health Support",
+            "deaddiction": "De-addiction / Rehab",
+            "plantation": "Tree Plantation Drive",
+            "other": "Other"
+        },
+        "messageLabel": "Your Message",
+        "messagePlaceholder": "How can we help you?",
+        "sending": "Sending...",
+        "send": "Send Message"
+    },
+    "aboutPage": {
+        "hero": {
+            "badge": "Our Legacy",
+            "title1": "Honoring",
+            "title2": "Tradition",
+            "title3": "Serving Humanity",
+            "quote": "\"Rooted in the timeless wisdom of <span class='font-semibold text-white border-b-2 border-accent-gold/50'>Sant Shree Randheer Ji Babal</span>, we build bridges of hope for the needy.\""
+        },
+        "leadership": {
+            "badge": "Leadership",
+            "title": "Our Leadership",
+            "presQuote": "\"Our mission is to serve humanity with the same devotion that Sant Randheer Ji had for nature.\"",
+            "presName": "Chairman Shri Ramesh Babal",
+            "presRole": "President, Sant Shree Randheer Ji Babal Seva Sansthan",
+            "secQuote": "\"Our main goal is to sow the seeds of education and values within the society through the institute.\"",
+            "secName": "Jaikishan Bishnoi",
+            "secRole": "General Secretary (Basni Nikuba)"
+        },
+        "objectives": {
+            "badge": "Our Resolution",
+            "title": "Objectives of the Organization",
+            "intro": "The jurisdiction of the committee extends to the revenue limits of the entire state of Rajasthan. Our main objectives are as follows:",
+            "list": [
+                "To propagate the philosophy and teachings of Lord Jambheshwar.",
+                "To undertake all activities related to the ideology and teachings of Shri Randhirji Babal, the supreme disciple of Lord Jambheshwar.",
+                "To initiate and organize a fair in the name of Shri Randhirji Babal.",
+                "To collect and publish the history and genealogy of the Babal gotra.",
+                "To work for environmental and ecological conservation.",
+                "To eradicate prevalent social evils.",
+                "To work for the education and development of boys, girls, women, and adults.",
+                "To work for the upliftment and development of the poor and economically/socially backward people.",
+                "To establish and operate schools, colleges, and universities.",
+                "To initiate and operate hostels and reading rooms for students.",
+                "To undertake activities related to education, health, medicine, and agricultural development.",
+                "To undertake all activities for the literature and development of the Bishnoi sect.",
+                "To undertake any other activities in the public interest."
+            ]
+        },
+        "structure": {
+            "title": "Formation of the Executive Committee",
+            "intro": "To run the work of the institute smoothly, a managing executive committee will be formed consisting of a total of <strong class='text-primary dark:text-accent-gold'>31 office bearers and members</strong>:",
+            "roles": {
+                "pres": "President",
+                "vp": "Vice President",
+                "secGen": "General Secretary",
+                "sec": "Secretary",
+                "treasurer": "Treasurer",
+                "coTreasurer": "Co-Treasurer",
+                "spokesperson": "Spokesperson",
+                "orgSec": "Organizing Secretary",
+                "execMember": "Executive Member"
+            }
+        },
+        "membership": {
+            "title": "Membership and Rules",
+            "eligibilityTitle": "Eligibility / Eligibility",
+            "eligibilityText": "<strong>Qualification:</strong> The member must be an adult, fully vegetarian, not hunting wildlife, and must have an unshakable belief in the principles of Lord Jambheshwar.",
+            "feeTitle": "Membership Fee / Membership Fee",
+            "lifetime": "Lifetime Member",
+            "general": "General Member",
+            "note": "Note: Rules for membership expulsion, general assembly, and meetings will be governed according to the 'Institute Constitution Manual'."
+        }
+    },
+    "servicesPage": {
+        "hero": {
+            "badge": "Our Initiatives",
+            "title1": "Service",
+            "title2": "in Action",
+            "subtitle": "Explore our holistic approach to community upliftment, spanning education and healthcare to spiritual growth and environmental preservation."
+        },
+        "cta": {
+            "title": "Inspired to make a difference?",
+            "desc": "Your support can fuel these initiatives and bring light to countless lives. Join us today.",
+            "btn": "Support a Noble Cause"
+        },
+        "learnMore": "Learn More"
+    },
+    "teamPage": {
+        "hero": {
+            "badge": "Organization & Team",
+            "title1": "Spiritual Roots,",
+            "title2": "Modern Leadership",
+            "subtitle": "\"Inspired by Guru Jambhoji's teachings, this institute founded by Sant Randheer Ji is constantly on the path of service.\""
+        },
+        "hierarchy": {
+            "items": [
+                {
+                    "title": "Revered Deity",
+                    "name": "Lord Guru Jambhoji",
+                    "description": "Shri Jambheshwar Bhagwan (V.S. 1508 - 1593), founder of the Bishnoi sect and our supreme deity, who gave the immortal message of humanity and environmental protection through 29 principles."
+                },
+                {
+                    "title": "Patvi Disciple & First Mahant",
+                    "name": "Sant Shri Randheer Ji Babal",
+                    "description": "Close disciple of Guru Jambhoji and the first Mahant of Mukam. Founded Padiyal village in V.S. 1542 and dedicated his entire life to religious preaching and public welfare."
+                }
+            ],
+            "title": "Continuous Stream of Spiritual Guidance Generation After Generation",
+            "badge": "Lineage Tradition"
+        },
+        "mentorship": {
+            "badge": "Mentorship Board",
+            "title": "Honorable Board of Patrons",
+            "subtitle": "An experienced and enlightened mentorship board providing guidance in the institute's activities.",
+            "footer": "Note: Immortal Spiritual and Social Heritage",
+            "items": [
+                {
+                    "name": "Swami Shri Mahant Shivdas Ji",
+                    "location": "Rurkuli"
+                },
+                {
+                    "name": "Swami Shri Sacchidanand Ji",
+                    "location": "Lalasar Sathari"
+                },
+                {
+                    "name": "Swami Shri Ramnarayan Ji",
+                    "location": "Fitkasni"
+                },
+                {
+                    "name": "Dr. Shri Krishan Kumar Ji Dehdu",
+                    "location": "Bikaner"
+                },
+                {
+                    "name": "Shri R.K. Kadwasra",
+                    "location": "Delhi"
+                },
+                {
+                    "name": "Shri Pokarram",
+                    "details": "Son of Shri Annaram Ji Babal"
+                },
+                {
+                    "name": "Shri Paburam Ji Babal",
+                    "details": "Son of Shri Kanaram Ji"
+                },
+                {
+                    "name": "Shri Sobharam Ji",
+                    "details": "Son of Shri Mangla Ram Ji Babal"
+                },
+                {
+                    "name": "Shri Bhanji Fauji Sa",
+                    "details": "Son of Shri Motiram Ji Babal"
+                },
+                {
+                    "name": "Shri Pokar Ram Ji",
+                    "details": "Son of Shri Motiramji Babal"
+                },
+                {
+                    "name": "Shri Bhanwarlal Ji",
+                    "details": "Son of Shri Dhularam Ji Babal"
+                },
+                {
+                    "name": "Shri Sagar Ji",
+                    "details": "Son of Shri Mangla Ram Ji Babal"
+                },
+                {
+                    "name": "Shri Shriram Ji",
+                    "details": "Son of Shri Dhokalram Ji"
+                },
+                {
+                    "name": "Shri Bhikharam Ji",
+                    "details": "Son of Shri Gokalram Ji"
+                }
+            ]
+        },
+        "executive": {
+            "badge": "Executive Committee",
+            "title": "Our Active Team",
+            "presidentsTitle": "President & Patron",
+            "vicePresidentsTitle": "Vice Presidents",
+            "keyBearersTitle": "Key Office Bearers",
+            "secretariesTitle": "Secretaries & Others",
+            "presidents": [
+                {
+                    "name": "Chairman Shri Ramesh Babal",
+                    "role": "Current President & Patron",
+                    "description": "The current leader of the institute who is taking the 500-year-old legacy forward in the modern era."
+                }
+            ],
+            "vicePresidents": [
+                {
+                    "name": "Babu Ram",
+                    "role": "Vice President",
+                    "location": "Basni Nikuba"
+                },
+                {
+                    "name": "Mohan Lal Bishnoi",
+                    "role": "Vice President",
+                    "location": "Fitkasni"
+                },
+                {
+                    "name": "Bhagirath Bishnoi",
+                    "role": "Vice President",
+                    "location": "Fitkasni (Babal Nagar)"
+                },
+                {
+                    "name": "Shyam Bishnoi",
+                    "role": "Vice President",
+                    "location": "Rasira"
+                }
+            ],
+            "keyBearers": [
+                {
+                    "name": "Jaikishan Bishnoi",
+                    "role": "General Secretary",
+                    "location": "Basni Nikuba"
+                },
+                {
+                    "name": "Babu Lal Bishnoi",
+                    "role": "Treasurer",
+                    "location": "Fitkasni"
+                },
+                {
+                    "name": "Hanuman Ram Bishnoi",
+                    "role": "Co-Treasurer",
+                    "location": "Fitkasni"
+                }
+            ],
+            "secretaries": [
+                {
+                    "name": "Mekaram Bishnoi",
+                    "role": "Secretary",
+                    "location": "Fitkasni"
+                },
+                {
+                    "name": "Champa Lal Bishnoi",
+                    "role": "Secretary",
+                    "location": "Derdi Nadi"
+                },
+                {
+                    "name": "Banshilal",
+                    "role": "Secretary",
+                    "location": "Basni Nikuba"
+                },
+                {
+                    "name": "Shrawan Ram",
+                    "role": "Secretary",
+                    "location": "Fitkasni"
+                },
+                {
+                    "name": "Ram Swaroop Babal",
+                    "role": "Organizing Secretary",
+                    "location": "Fitkasni"
+                },
+                {
+                    "name": "Prem Prakash",
+                    "role": "Organizing Secretary",
+                    "location": "Babalon Ki Dhani"
+                },
+                {
+                    "name": "Ramdeen",
+                    "role": "Spokesperson",
+                    "location": "Sangasni"
+                }
+            ]
+        }
+    },
+    "galleryPage": {
+        "hero": {
+            "badge": "Visual Archives",
+            "title1": "In Frames",
+            "title2": "Our Journey",
+            "subtitle": "A poetic visual archive of transformation, human connection, and the spirit of selfless service in the communities we serve."
+        },
+        "lightbox": {
+            "image": "Image",
+            "of": "of"
+        },
+        "cta": {
+            "title": "Share Your Story",
+            "desc": "Have you participated in our events? We would love to see your perspective and add it to our community archives.",
+            "btn": "Contact Us"
+        },
+        "categories": {
+            "community": "Community Service",
+            "eyeCamp": "Eye Camp",
+            "cowService": "Cow Service",
+            "education": "Education",
+            "awareness": "Public Awareness",
+            "birdService": "Bird Service",
+            "satsang": "Satsang",
+            "environment": "Environmental Protection",
+            "medical": "Medical Assistance",
+            "educationalTour": "Educational Tour",
+            "culture": "Cultural Programs",
+            "yoga": "Yoga & Meditation",
+            "womenEmpowerment": "Women Empowerment",
+            "cleanIndia": "Clean India",
+            "oldAgeHome": "Old Age Home Service",
+            "water": "Water Conservation",
+            "blood": "Blood Donation Camp",
+            "activities": "Institute Activities"
+        }
+    },
+    "cookiePolicy": {
+        "title": "Cookie Policy",
+        "lastUpdated": "Last Updated: January 2026",
+        "intro1": "This Cookie Policy explains what cookies are and how we use them. You should read this policy so you can understand what type of cookies we use, the information we collect using cookies and how that information is used.",
+        "section1": {
+            "title": "What are Cookies?",
+            "p1": "Cookies are small text files that are stored on your computer or mobile device when you visit a website. They are widely used in order to make websites work, or work more efficiently, as well as to provide information to the owners of the site."
+        },
+        "section2": {
+            "title": "How We Use Cookies",
+            "p1": "We use cookies for the following purposes:",
+            "items": [
+                "<span className=\"font-bold\">Essential Cookies:</span> These are necessary for the website to function properly. They enable core functionality such as page navigation and access to secure areas.",
+                "<span className=\"font-bold\">Analytics Cookies:</span> These cookies help us to understand how visitors interact with our website by collecting and reporting information anonymously. This helps us to improve our services."
+            ]
+        },
+        "section3": {
+            "title": "Managing Cookies",
+            "p1": "Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. However, this may prevent you from taking full advantage of the website."
+        },
+        "section4": {
+            "title": "Contact Us",
+            "p1": "If you have any questions about our use of cookies, please contact us:",
+            "email": "Email:"
+        }
+    },
+    "termsOfService": {
+        "title": "Terms of Service",
+        "lastUpdated": "Last Updated: January 2026",
+        "section1": {
+            "title": "1. Terms",
+            "p1": "By accessing the website at <span className=\"font-bold\">https://randheerseva.org</span>, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws."
+        },
+        "section2": {
+            "title": "2. Use License",
+            "p1": "Permission is granted to temporarily download one copy of the materials (information or software) on Sant Shri Randheer Ji Babal Seva Sansthan's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:",
+            "items": [
+                "modify or copy the materials;",
+                "use the materials for any commercial purpose, or for any public display (commercial or non-commercial);",
+                "attempt to decompile or reverse engineer any software contained on the website;",
+                "remove any copyright or other proprietary notations from the materials; or",
+                "transfer the materials to another person or \"mirror\" the materials on any other server."
+            ]
+        },
+        "section3": {
+            "title": "3. Disclaimer",
+            "p1": "The materials on Sant Shri Randheer Ji Babal Seva Sansthan's website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights."
+        },
+        "section4": {
+            "title": "4. Governing Law",
+            "p1": "These terms and conditions are governed by and construed in accordance with the laws of Rajasthan, India and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location."
+        },
+        "section5": {
+            "title": "5. Contact Us",
+            "p1": "If you have any questions about these Terms, please contact us:",
+            "email": "Email:"
+        }
+    },
+    "privacyPolicy": {
+        "title": "Privacy Policy",
+        "lastUpdated": "Last Updated: January 2026",
+        "intro1": "Sant Shri Randheer Ji Babal Seva Sansthan (\"we,\" \"our,\" or \"us\") is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by SSRJB Seva Sansthan.",
+        "intro2": "This Privacy Policy applies to our website and its associated subdomains (collectively, our \"Service\"). By accessing or using our Service, you signify that you have read, understood, and agree to our collection, storage, use, and disclosure of your personal information as described in this Privacy Policy.",
+        "section1": {
+            "title": "1. Information We Collect",
+            "p1": "We collect information you provide directly to us. For example, we collect information when you:",
+            "items": [
+                "Fill out a contact form or volunteer application.",
+                "Make a donation or contribution.",
+                "Subscribe to our newsletter or communications.",
+                "Communicate with us via third-party platforms."
+            ],
+            "p2": "The types of information we may collect include your name, email address, phone number, and any other information you choose to provide."
+        },
+        "section2": {
+            "title": "2. How We Use Your Information",
+            "p1": "We use the information we collect to:",
+            "items": [
+                "Provide, maintain, and improve our services and initiatives.",
+                "Process donations and send receipts.",
+                "Send you technical notices, updates, security alerts, and support messages.",
+                "Respond to your comments, questions, and requests.",
+                "Communicate with you about news, events, and campaigns."
+            ]
+        },
+        "section3": {
+            "title": "3. Disclosure of Information",
+            "p1": "We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties unless we have your permission or are required by law."
+        },
+        "section4": {
+            "title": "4. Security",
+            "p1": "We take reasonable measures to help protect information about you from loss, theft, misuse and unauthorized access, disclosure, alteration and destruction. However, no internet transmission is ever fully secure or error free."
+        },
+        "section5": {
+            "title": "5. Contact Us",
+            "p1": "If you have any questions about this Privacy Policy, please contact us:",
+            "contactInfo": "Sant Shri Randheer Ji Babal Seva Sansthan<br/>HQ Shri Jambheshwar Bhagwan Mandir,<br/>Fitkasni, District Jodhpur, Rajasthan<br/>Email:"
+        }
+    },
+    "works": {
+        "completed": {
+            "badge": "Completed Works",
+            "title1": "Our Major",
+            "title2": "Works",
+            "description": "Some of the major works done by us for the upliftment of society and the environment.",
+            "items": {
+                "1": {
+                    "title": "Padiyal Sadidadi Temple Construction",
+                    "description": "Hall, bathroom, and toilet construction work.",
+                    "location": "Padiyal"
+                },
+                "2": {
+                    "title": "Sati Dadi Temple Arrangement",
+                    "description": "Complete boarding, lodging, and kitchen arrangements available for 40-50 people."
+                },
+                "3": {
+                    "title": "Padiyal - Land Conservation",
+                    "description": "Boundary construction work by acquiring land through collective cooperation.",
+                    "location": "Padiyal"
+                },
+                "4": {
+                    "title": "Water & Environment Service",
+                    "description": "Water tank construction and intensive afforestation campaign."
+                },
+                "5": {
+                    "title": "Holy Temple Security & Service",
+                    "description": "Appointment of Priest/Maharaj and complete CCTV security."
+                },
+                "6": {
+                    "title": "Annual Fair Organization",
+                    "description": "Organization of a grand fair every year for the Bishnoi society and family members to visit."
+                },
+                "7": {
+                    "title": "History & Lineage Compilation",
+                    "description": "Compilation of Randheer Ji Babal and Babal history with the help of historians."
+                },
+                "8": {
+                    "title": "Fitkasni Temple Construction",
+                    "description": "Construction of Sadidadi and Sati-Dada temple in Fitkasni.",
+                    "location": "Fitkasni"
+                },
+                "9": {
+                    "title": "Jagran & Jambhani Katha",
+                    "description": "Conducting spiritual events for the Fitkasni Sati-Dadi and Sati-Dada temples.",
+                    "location": "Fitkasni"
+                }
+            }
+        },
+        "upcoming": {
+            "1": {
+                "title": "“Randheer Ji Babal” Library Construction",
+                "description": "A modern library in Fitkasni village for the bright future of children. Efforts are ongoing to clear the hall.",
+                "location": "Fitkasni"
+            },
+            "2": {
+                "title": "Randheer Ji Park & Water Cooler",
+                "description": "Development of a park for environmental conservation and construction of a water cooler for passersby."
+            },
+            "3": {
+                "title": "Historic Book Publication",
+                "description": "Publication of a detailed book on Randheer Ji Babal and Babal history."
+            },
+            "4": {
+                "title": "Randheer Ji's Chhatri Construction",
+                "description": "Construction of a grand umbrella at Mukam Temple - Requires collective unity and effort.",
+                "location": "Mukam"
+            },
+            "5": {
+                "title": "Randheer Ji Babal & Khangar Ba Award",
+                "description": "Launch of awards for excellent service to society."
+            },
+            "6": {
+                "title": "Khejarli Temple Rebuilding & Restoration",
+                "description": "Grand reconstruction and renovation of the Khejarli temple complex in the holy memory of the martyrs.",
+                "location": "Khejarli"
+            },
+            "badge": "Future Resolution",
+            "title1": "Upcoming",
+            "title2": "Projects",
+            "quote": "Your participation is essential in this noble work of social and spiritual awakening.",
+            "items": {
+                "1": {
+                    "title": "“Randheer Ji Babal” Library Construction",
+                    "description": "A modern library in Fitkasni village for the bright future of children. Efforts are ongoing to clear the hall.",
+                    "location": "Fitkasni"
+                },
+                "2": {
+                    "title": "Randheer Ji Park & Water Cooler",
+                    "description": "Development of a park for environmental conservation and construction of a water cooler for passersby."
+                },
+                "3": {
+                    "title": "Historic Book Publication",
+                    "description": "Publication of a detailed book on Randheer Ji Babal and Babal history."
+                },
+                "4": {
+                    "title": "Randheer Ji's Chhatri Construction",
+                    "description": "Construction of a grand umbrella at Mukam Temple - Requires collective unity and effort.",
+                    "location": "Mukam"
+                },
+                "5": {
+                    "title": "Randheer Ji Babal & Khangar Ba Award",
+                    "description": "Launch of awards for excellent service to society."
+                },
+                "6": {
+                    "title": "Khejarli Temple Rebuilding & Restoration",
+                    "description": "Grand reconstruction and renovation of the Khejarli temple complex in the holy memory of the martyrs.",
+                    "location": "Khejarli"
+                }
+            }
+        }
+    },
+    "language": {
+        "hi": "Hindi",
+        "en": "English"
+    },
+    "historyPage": {
+        "introduction": {
+            "title": "Guru Jambhoji's Patvi Disciple Randheer Ji Babal and Babal Genealogy",
+            "content": "Guru Jambhoji was incarnated in Vikram Samvat 1508 and attained Mahaparinirvana on Mingsar Badi Navami in Vikram Samvat 1593. Throughout his life, Guru Jambhoji preached to people through his words and taught the right way to live. Randheer Ji Babal was a Patvi and Hazuri (close associate) disciple of Lord Jambheshwar and always stayed with him. Poet Sahabramji Rahad has written in his book Jambhsar that when Guru Jambhoji was about to become invisible, his disciples asked - 'Maharaj, what will happen to us? Who will be the master of the sect?' Then Guru Jambhoji gave different garbs to four saints and bestowed different seats (Gaddis)."
+        },
+        "chapters": [
+            {
+                "id": "chapter-1",
+                "title": "Meeting the Guru and Initiation",
+                "content": "Randheer Ji Babal was a Jat from the village of Babalsar. In V.S. 1541, a severe famine struck Marwar, and he along with his family was traveling to Malwa. On this journey, he came into contact with Guru Maharaj Shri, listened to his sermons, and subsequently got initiated into the Bishnoi sect. Randheer Ji Babal founded the village of Padiyal (Phalodi) in V.S. 1542. Later on, he and his family started living in Padiyal. From there, he began visiting Samrathal to listen to the teachings of Guru Jambhoji. Gradually, retiring from his social responsibilities, he settled permanently in Samrathal with the Guru. Randheer Ji Babal always stayed with his Guru to spread religious principles, teach the Guru's words to common people, impart knowledge, perform Havan and Puja, awaken them, and personally express reverence to his Guru through Sakhi recitals and Aartis."
+            },
+            {
+                "id": "chapter-2",
+                "title": "The Garb Episode and Position of Mahant",
+                "content": "Guru Jambhoji presented different garbs to his four prime disciples:\n\n\"Redo Ji Kali Poshaka, Kiye Mahant Sir Par Kar Rakha.\nLal Poshaka Mahant Nyalo, Jambhaguru Aagya Mein Chalo.\nRandheer Ji Bhagwe Ke Mahanta, Madi Deenhi Sab Mil Santa.\nChauthi Madi Shwet Poshaka, Aapne Paas Leevi Har Sakha.\"\n\nIn this way, the Guru bestowed the saffron (Bhagwan) garb to Randheer Ji, called him near, and said smilingly - \"Randheer Ji, you are the master of Riddhi (prosperity). From today, you hold the authority over this place.\" The poet further says that the Jambh Peera made Mahant Randheera the master of the Mukam with his own hands. Randheer Ji Babal was a householder and had a family, but after coming under the shelter of Guru Jambhoji, he became a saint."
+            },
+            {
+                "id": "chapter-3",
+                "title": "The First Aarti and Spiritual Thoughts",
+                "content": "An Aarti composed by Randheer Ji related to Jambhoji is found, which is the first Aarti of Jambhani literature. From this Aarti, it is revealed that the Bishnoi sect has been going on since Satyuga. Guru Jambhoji at that time incarnated as Narasimha and salvaged his devotees and others. Here is the original Aarti composed by Randheer Ji Babal:",
+                "aarti": [
+                    "Aarti Kije Narsingh Kanwar Ki, Ved Vimal Yash Bhave Mere Swami Ji Ki..",
+                    "Pehli Aarti Prahlad Ubaare, Hiranyakashipu Nakh Udar Bidare.",
+                    "Doosri Aarti Bawan Sewa, Bali Ke Dware Padhare Hari Dewa.",
+                    "Teesri Aarti Vaikunth Padhare, Sahastrabahu Ji Ke Karaj Saare.",
+                    "Chauthi Aarti Asur Sanhare, Bhakt Vibhishan Lank Baithaye.",
+                    "Panchvi Aarti Kans Pachhai, Gopiyan Gwal Sada Pratipale.",
+                    "Tulsi Ke Paat Jo Ghat Ghat Heera, Hari Ke Charan Gun Gaavai Randheer."
+                ]
+            },
+            {
+                "id": "chapter-4",
+                "title": "Delhi Journey and Lodi Rulers",
+                "content": "During the manifestation of Guru Jambhoji, the Lodi dynasty was ruling Delhi. Bahlol Lodi, Sikandar Lodi, and Ibrahim Lodi were the three major rulers of this dynasty. Among them, Guru Jambhoji came in contact with Sikandar Lodi. During Guru Jambhoji's journey to Delhi, his beloved disciple Randheer Ji Babal was with him. Once when Guru Jambhoji went to Delhi to get his disciples Hasam-Kasam tailors released, Randheer Ji Babal accompanied him. He was always ready to serve his Guru."
+            }
+        ],
+        "vanshavaliDetails": {
+            "title": "History of Babal Lineage",
+            "badge": "Genealogy",
+            "description": "The Babal family has immense faith here, and everyone visits to pay their respects on Jeth Sudi Dashami.",
+            "lineage": [
+                {
+                    "name": "Khemraj Ji Babal",
+                    "village": "Babalsar",
+                    "note": "Forefather of the Babal lineage"
+                },
+                {
+                    "name": "Randheer Ji Babal",
+                    "village": "Padiyal",
+                    "note": "Initiated into the Bishnoi sect, first Mahant of Mukam temple. Founded the village of Padiyal in V.S. 1542."
+                },
+                {
+                    "name": "Hapuji",
+                    "wives": [
+                        {
+                            "name": "Heera Devi Khileran",
+                            "from": "Peelwa",
+                            "details": "Daughter of Heeraji and granddaughter of Harkaji"
+                        },
+                        {
+                            "name": "Gaura Devi Bhambhu"
+                        }
+                    ],
+                    "note": "Hapuji passed away on Kartik Badi Teej, Samvat 1612."
+                },
+                {
+                    "name": "Manduji",
+                    "wives": [
+                        {
+                            "name": "Gavri Devi Saran",
+                            "from": "Bhojasar",
+                            "details": "Daughter of Jaguji, granddaughter of Dedoji"
+                        },
+                        {
+                            "name": "Antiya (Itiya) Godara",
+                            "from": "Palli",
+                            "details": "Daughter of Premji, granddaughter of Ramuji"
+                        }
+                    ],
+                    "sons": [
+                        "Lalo Ji",
+                        "Laduji",
+                        "Nathoji"
+                    ],
+                    "note": "Manduji passed away on Kartik Sudi Satam, Samvat 1662. Manduji's wife Antiya committed Sati behind her son Nathoji on Samvat 1608 Bhadwa Sudi Aatham, Monday at 6 PM, who is known today as 'Mahasati'. She is revered on Bhadwa Sudi Aatham."
+                },
+                {
+                    "name": "Laduji",
+                    "wives": [
+                        {
+                            "name": "Ganwari Godari",
+                            "from": "Peelwa",
+                            "details": "Daughter of Heeraji and granddaughter of Harkaji"
+                        }
+                    ],
+                    "note": "Son of Manduji. He resided in Padiyal."
+                },
+                {
+                    "name": "Lalo Ji",
+                    "wives": [
+                        {
+                            "name": "Ganga Beniwal",
+                            "from": "Bhojasar",
+                            "details": "Daughter of Iroji and granddaughter of Mugloji"
+                        },
+                        {
+                            "name": "Nauji Mahla",
+                            "from": "Jholiyali",
+                            "details": "Daughter of Dharmoji, granddaughter of Nimboji"
+                        }
+                    ],
+                    "sons": [
+                        "Ratnoji",
+                        "Sametloji"
+                    ],
+                    "village": "Fitkasni (Jodhpur)",
+                    "note": "Laloji founded the Fitkasni village on V.S. 1617 Jeth Sudi Pancham. Laloji passed away on Jeth Sudi Teej, V.S. 1677."
+                },
+                {
+                    "name": "Ratnoji",
+                    "wives": [
+                        {
+                            "name": "Pami-Paro Godari",
+                            "from": "Kumbheji"
+                        }
+                    ],
+                    "sons": [
+                        "Jaimali Ji",
+                        "Jayoji",
+                        "Jodhoji",
+                        "Aasuji",
+                        "Jagmalji"
+                    ],
+                    "note": "Ratnoji's son Jaimal Ji gave his life in religious works; he became a martyr in Fitkasni village. He holds immense respect among the Babals. The lineage later continued through Jayo Ji, Jodha Ji, Aaso Ji, and Jagmal Ji."
+                },
+                {
+                    "name": "Current Generation",
+                    "note": "Currently, the 16th/17th generations of the Randheer Ji Babal lineage are flourishing and engaged in the service of society and environment."
+                }
+            ],
+            "finalQuote": "Currently, the 16th/17th generations of the Randheer Ji Babal lineage are flourishing."
+        },
+        "khejarli": {
+            "title": "Khejarli Massacre",
+            "titlePrefix": "Khejarli",
+            "titleSuffix": "'s",
+            "titleHighlight": "Sacrifice",
+            "badge": "Supreme Sacrifice",
+            "era": "V.S. 1787",
+            "description": "\"Bhado Sudi Dashami, V.S. 1787: Under the leadership of Amrita Devi Bishnoi, 363 brave Bishnois sacrificed their lives to protect the Khejri trees. In this event, 26 members of the Babal family also made their supreme sacrifice.\"",
+            "martyrsListTitle": "Roll of Honor",
+            "martyrsListSubtitle": "Total 26 Martyrs (23 Men, 3 Women)",
+            "martyrsListDate": "Tuesday, V.S. 1787",
+            "martyrsSolemnNote": "Immortal Martyrs Always Remembered",
+            "martyrs": [
+                "1. Panchoji Babal",
+                "2. Rupoji Babal",
+                "3. Aasoji Babal",
+                "4. Gordhanji Babal",
+                "5. Padma Khod (Wife)",
+                "6. Manoharji Babal",
+                "7. Sujoji Babal",
+                "8. Neti Thalod (Wife of Sujoji)",
+                "9. Rugji Babal",
+                "10. Laduji Babal",
+                "11. Bhinwji Babal",
+                "12. Netoji Babal",
+                "13. Jaisoji Babal",
+                "14. Tejoji Babal",
+                "15. Jaisoji Babal",
+                "16. Lakhoji Babal",
+                "17. Surjani Bai Babal",
+                "18. Rahuji Babal",
+                "19. Narsinghji Babal",
+                "20. Mehoji Babal",
+                "21. Kasroji Babal",
+                "22. Pithoji Babal",
+                "23. Jehoji Babal",
+                "24. Samelji Babal",
+                "25. Soni Godari (Wife of Tejoji)",
+                "26. Kushloji Babal"
+            ]
+        },
+        "chaptersBadge": "Chapter"
+    },
+    "documentsPage": {
+        "badge": "Information Center",
+        "title1": "Important",
+        "title2": "Documents",
+        "viewNow": "View Now",
+        "cta": {
+            "title": "Need More Information?",
+            "desc": "If you need any specific document or information, please contact us.",
+            "btn": "Contact Us"
+        },
+        "docs": {
+            "1": {
+                "title": "सहकारिता विभाग / COOPERATIVE DEPARTMENT",
+                "desc": "रजिस्ट्रीकरण प्रमाण-पत्र / REGISTRATION CERTIFICATE"
+            },
+            "2": {
+                "title": "सहकारिता विभाग / COOPERATIVE DEPARTMENT",
+                "desc": "कार्यकारिणी प्रमाण पत्र / EXECUTIVE COMMITTEE CERTIFICATE"
+            },
+            "3": {
+                "title": "Union Constitution Letter",
+                "desc": "Shri Jambheshwar Bhagwan Temple, Fitkasni, District Jodhpur (Rajasthan)"
+            },
+            "4": {
+                "title": "Union Constitution Rules",
+                "desc": "Shri Jambheshwar Bhagwan Temple, Fitkasni, District Jodhpur (Rajasthan)"
+            }
+        }
+    },
+    "serviceDetail": {
+        "notFound": {
+            "title": "Service Not Found",
+            "btn": "Return to Services"
+        },
+        "relatedWorks": {
+            "badge": "Completed Works",
+            "title1": "Our Major Work",
+            "title2": "In This Area",
+            "location": "Location"
+        },
+        "relatedUpcoming": {
+            "badge": "Future Resolution",
+            "title1": "Upcoming",
+            "title2": "Projects",
+            "location": "Proposed Location"
+        },
+        "cta": {
+            "title": "Be a Part of the Change",
+            "desc": "Join this 500-year-old sacred tradition of service and contribute to the upliftment of society.",
+            "btn": "Contribute Today"
+        }
+    },
+    "contributionSection": {
+        "badge": "Contribute",
+        "title1": "How Can You",
+        "title2": "Join Us?",
+        "quote": "\"Paropkaraya Punyaya Papaya Parpeedanam\" - Helping others is the greatest virtue.",
+        "contactBtn": "Contact Us",
+        "items": {
+            "donation": {
+                "title": "Donation",
+                "desc": "Your small financial contribution can bring a big change in someone's life."
+            },
+            "volunteer": {
+                "title": "Volunteer",
+                "desc": "Contribute to our service activities through your time and skills."
+            },
+            "awareness": {
+                "title": "Awareness",
+                "desc": "Spread the message of the institute's mission and environmental conservation to as many people as possible."
+            }
+        }
+    }
+}

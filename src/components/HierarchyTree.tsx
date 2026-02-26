@@ -3,9 +3,10 @@
 
 import React from 'react';
 import { teamData } from '@/data/team';
-import { FormatBabal } from './FormatBabal';
+import { useLanguage } from '@/context/LanguageContext';
 
 const HierarchyTree = () => {
+    const { t } = useLanguage();
     const { spiritualHierarchy } = teamData;
 
     return (
@@ -43,13 +44,13 @@ const HierarchyTree = () => {
                             {/* Info Box */}
                             <div className="mt-8 text-center max-w-xl bg-white/80 dark:bg-[#1a2024]/80 backdrop-blur-md p-8 rounded-[2.5rem] shadow-xl border border-gray-100 dark:border-gray-800 transform group-hover:-translate-y-2 transition-transform duration-500">
                                 <span className="inline-block px-4 py-1 bg-accent-gold/10 text-accent-gold text-xs font-bold rounded-full mb-3 uppercase tracking-[0.2em] border border-accent-gold/20">
-                                    <FormatBabal text={leader.title} />
+                                    {t(`teamPage.hierarchy.items.${index}.title`)}
                                 </span>
                                 <h3 className="text-3xl md:text-4xl font-display font-black text-[#0d1b1c] dark:text-white mb-4">
-                                    <FormatBabal text={leader.name} />
+                                    {t(`teamPage.hierarchy.items.${index}.name`)}
                                 </h3>
                                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm md:text-base font-medium">
-                                    <FormatBabal text={leader.description} />
+                                    {t(`teamPage.hierarchy.items.${index}.description`)}
                                 </p>
                             </div>
                         </div>

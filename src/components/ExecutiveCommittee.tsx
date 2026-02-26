@@ -3,7 +3,8 @@
 
 import React from 'react';
 import { teamData } from '@/data/team';
-import { FormatBabal } from './FormatBabal';
+import { useLanguage } from '@/context/LanguageContext';
+
 
 interface CommitteeMember {
     name: string;
@@ -14,22 +15,23 @@ interface CommitteeMember {
 }
 
 const ExecutiveCommittee = () => {
+    const { t } = useLanguage();
     const { executiveCommittee } = teamData;
 
     const sections = [
-        { title: 'अध्यक्ष एवं संरक्षक (President)', data: executiveCommittee.presidents },
-        { title: 'उपाध्यक्ष (Vice Presidents)', data: executiveCommittee.vicePresidents },
-        { title: 'प्रधान पदाधिकारी (Key Office Bearers)', data: executiveCommittee.keyBearers },
-        { title: 'सचिव एवं अन्य पदाधिकारी (Secretaries & Others)', data: executiveCommittee.secretaries },
+        { title: t('teamPage.executive.presidentsTitle'), data: executiveCommittee.presidents, key: 'presidents' },
+        { title: t('teamPage.executive.vicePresidentsTitle'), data: executiveCommittee.vicePresidents, key: 'vicePresidents' },
+        { title: t('teamPage.executive.keyBearersTitle'), data: executiveCommittee.keyBearers, key: 'keyBearers' },
+        { title: t('teamPage.executive.secretariesTitle'), data: executiveCommittee.secretaries, key: 'secretaries' },
     ];
 
     return (
         <section className="py-12 px-6 md:px-12 bg-[#f8fafb] dark:bg-black/20">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-20">
-                    <span className="text-accent-gold font-bold uppercase tracking-[0.3em] text-xs mb-4 block underline underline-offset-8 decoration-accent-gold/30">कार्यकारिणी</span>
+                    <span className="text-accent-gold font-bold uppercase tracking-[0.3em] text-xs mb-4 block underline underline-offset-8 decoration-accent-gold/30">{t('teamPage.executive.badge')}</span>
                     <h2 className="text-4xl md:text-5xl font-display font-black text-[#0d1b1c] dark:text-white mb-6">
-                        हमारी सक्रिय टीम
+                        {t('teamPage.executive.title')}
                     </h2>
                 </div>
 
@@ -46,11 +48,7 @@ const ExecutiveCommittee = () => {
                                     </h3>
                                 </div>
 
-                                <div className={`grid grid-cols-1 md:grid-cols-2 ${
-                                    section.data.length <= 2 ? 'lg:grid-cols-2' :
-                                    section.data.length === 3 ? 'lg:grid-cols-3' : 
-                                    'lg:grid-cols-4'
-                                } gap-6`}>
+                                <div className={`grid grid-cols-1 md:grid-cols-2 ${ section.data.length <= 2 ? 'lg:grid-cols-2' : section.data.length === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-4' } gap-6`}>
                                     {(section.data as CommitteeMember[]).map((member, index) => (
                                         <div 
                                             key={index} 
@@ -74,22 +72,22 @@ const ExecutiveCommittee = () => {
                                             {/* Text Content - Smaller Typography */}
                                             <div className="flex-1">
                                                 <h4 className="text-base md:text-lg font-bold text-[#0d1b1c] dark:text-white leading-tight mb-0.5">
-                                                    <FormatBabal text={member.name} />
+                                                    {t(`teamPage.executive.${section.key}.${index}.name`)}
                                                 </h4>
                                                 {member.location && (
                                                     <p className="text-gray-500 dark:text-gray-400 text-[10px] md:text-xs font-medium">
-                                                        <FormatBabal text={member.location} />
+                                                        {t(`teamPage.executive.${section.key}.${index}.location`)}
                                                     </p>
                                                 )}
                                                 {/* Optional: Show role if it's not obvious from category */}
                                                 {(member.role && member.role !== 'उपाध्यक्ष' && member.role !== 'सचिव') && (
                                                     <span className="text-[9px] text-accent-gold font-bold uppercase tracking-wider mt-0.5 block">
-                                                        <FormatBabal text={member.role} />
+                                                        {t(`teamPage.executive.${section.key}.${index}.role`)}
                                                     </span>
                                                 )}
                                                 {member.description && (
                                                     <p className="text-gray-600 dark:text-gray-400 text-[10px] md:text-xs mt-1 leading-snug">
-                                                        <FormatBabal text={member.description} />
+                                                        {t(`teamPage.executive.${section.key}.${index}.description`)}
                                                     </p>
                                                 )}
                                             </div>

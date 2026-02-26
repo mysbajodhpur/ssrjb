@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { setCookie, parseCookies } from 'nookies';
+import { useLanguage } from '@/context/LanguageContext';
 
 import { servicesData } from '@/data/services';
 
@@ -14,8 +14,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
-  const [currentLang, setCurrentLang] = useState('hi');
   const [showDonationModal, setShowDonationModal] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   // Handle scroll effect
   useEffect(() => {
@@ -23,53 +23,26 @@ const Navbar = () => {
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
-    
-    // Check current language
-    const cookies = parseCookies();
-    const lang = cookies.googtrans;
-    if (lang && lang.includes('/en')) {
-      setCurrentLang('en');
-    } else {
-      setCurrentLang('hi');
-    }
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleLanguageChange = (lang: string) => {
-    // Determine the cookie value. For Hindi (original), we set it to /hi/hi or just /hi/
-    // but /hi/hi is more explicit for many Google Translate setups.
-    const cookieValue = `/hi/${lang}`;
-    
-    setCookie(null, 'googtrans', cookieValue, {
-      maxAge: 30 * 24 * 60 * 60,
-      path: '/',
-      sameSite: 'lax'
-    });
-    
-    // Also update current state for immediate visual feedback before reload
-    setCurrentLang(lang);
-    
-    // Force a reload to let Google Translate script pick up the new cookie
-    window.location.reload();
-  };
-
   const navLinks = [
-    { name: 'मुख्य पृष्ठ', href: '/' },
-    { name: 'हमारे बारे में', href: '/about' },
+    { name: t('navbar.home'), href: '/' },
+    { name: t('navbar.about'), href: '/about' },
     { 
-      name: 'सेवाएं', 
+      name: t('navbar.services'), 
       href: '/services',
       children: servicesData.map(service => ({
-        name: service.title,
+        name: t(`services.${service.id}.title`),
         href: `/services/${service.slug}`,
         icon: service.icon
       }))
     },
-    { name: 'नेतृत्व', href: '/team' },
-    { name: 'गैलरी', href: '/gallery' },
-    { name: 'दस्तावेज़', href: '/documents' },
-    { name: 'संपर्क', href: '/contact' },
+    { name: t('navbar.leadership'), href: '/team' },
+    { name: t('navbar.gallery'), href: '/gallery' },
+    { name: t('navbar.documents'), href: '/documents' },
+    { name: t('navbar.contact'), href: '/contact' },
   ];
 
   const isActive = (path: string) => {
@@ -95,23 +68,23 @@ const Navbar = () => {
             </a>
             <span className="flex items-center gap-2 text-gray-400">
                <span className="material-symbols-outlined notranslate text-sm text-accent-gold">location_on</span>
-               जोधपुर, राजस्थान
+               {t('contact.address')}
             </span>
           </div>
           <div className="flex items-center gap-6">
              <div className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-gray-400">
               भाषा :-
                <button 
-                 onClick={() => handleLanguageChange('hi')} 
-                 className={`flex items-center gap-1 transition-colors cursor-pointer ${currentLang !== 'en' ? 'text-accent-gold' : 'hover:text-accent-gold'}`} 
+                 onClick={() => setLanguage('hi')} 
+                 className={`flex items-center gap-1 transition-colors cursor-pointer ${language !== 'en' ? 'text-accent-gold' : 'hover:text-accent-gold'}`} 
                  title="Hindi"
                >
                  हिंदी
                </button>
                <span className="w-px h-3 bg-gray-600"></span>
                <button 
-                 onClick={() => handleLanguageChange('en')} 
-                 className={`flex items-center gap-1 transition-colors cursor-pointer ${currentLang === 'en' ? 'text-accent-gold' : 'hover:text-accent-gold'}`} 
+                 onClick={() => setLanguage('en')} 
+                 className={`flex items-center gap-1 transition-colors cursor-pointer ${language === 'en' ? 'text-accent-gold' : 'hover:text-accent-gold'}`} 
                  title="English"
                >
                  English
@@ -121,7 +94,7 @@ const Navbar = () => {
                onClick={() => setShowDonationModal(true)}
                className="flex items-center justify-center rounded-full h-8 px-5 bg-accent-gold text-[#0b2b30] font-bold tracking-wide hover:bg-white transition-all duration-300 text-[10px] uppercase shadow-md active:scale-95 transform"
              >
-               दान करें
+               {t('navbar.donate')}
              </button>
           </div>
         </div>
@@ -129,11 +102,7 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <header 
-        className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-          scrolled 
-            ? 'bg-white/95 dark:bg-[#0e3f45]/95 backdrop-blur-md shadow-md py-3' 
-            : 'bg-white/80 dark:bg-[#0e3f45]/90 backdrop-blur-sm py-5'
-        }`}
+        className={`sticky top-0 z-50 w-full transition-all duration-300 ${ scrolled ? 'bg-white/95 dark:bg-[#0e3f45]/95 backdrop-blur-md shadow-md py-3' : 'bg-white/80 dark:bg-[#0e3f45]/90 backdrop-blur-sm py-5' }`}
       >
         <div className="max-w-[1440px] mx-auto flex items-center justify-between px-6 lg:px-16">
           {/* Logo Section */}
@@ -141,11 +110,11 @@ const Navbar = () => {
             <div className="size-12 rounded-sm overflow-hidden border-2 border-accent-gold/20 group-hover:border-accent-gold transition-all duration-300 shadow-sm">
               <img src="/images/randheer-ji.jpg" alt="Sant Shree Randheer Ji" className="w-full h-full object-cover" />
             </div>
-            <div className="flex flex-col">
+             <div className="flex flex-col">
                <h3 className="text-xl font-display font-bold text-[#0d1b1c] dark:text-white leading-none">
-                  संत श्री रणधीर जी <span className="text-accent-gold notranslate">बाबल</span>
+                  {language === 'hi' ? 'संत श्री रणधीर जी' : 'Sant Shree Randheer Ji'} <span className="text-accent-gold">{language === 'hi' ? 'बाबल' : 'Babal'}</span>
                </h3>
-               <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 dark:text-gray-300 font-bold mt-1">सेवा संस्थान</span>
+               <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 dark:text-gray-300 font-bold mt-1">{language === 'hi' ? 'सेवा संस्थान' : 'Seva Sansthan'}</span>
             </div>
           </Link>
           
@@ -155,11 +124,7 @@ const Navbar = () => {
               <div key={link.name} className="relative group">
                 <Link 
                   href={link.href} 
-                  className={`text-sm font-bold tracking-widest uppercase transition-all duration-300 relative py-2 font-sans flex items-center gap-1 ${
-                    isActive(link.href) 
-                      ? 'text-primary dark:text-accent-gold' 
-                      : 'text-gray-600 dark:text-gray-200 hover:text-primary dark:hover:text-accent-gold'
-                  }`}
+                  className={`text-sm font-bold tracking-widest uppercase transition-all duration-300 relative py-2 font-sans flex items-center gap-1 ${ isActive(link.href) ? 'text-primary dark:text-accent-gold' : 'text-gray-600 dark:text-gray-200 hover:text-primary dark:hover:text-accent-gold' }`}
                 >
                   {link.name}
                   {link.children && <span className="material-symbols-outlined notranslate text-[16px]">expand_more</span>}
@@ -176,11 +141,7 @@ const Navbar = () => {
                            <Link 
                              key={child.name} 
                              href={child.href}
-                             className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors group/item ${
-                               isChildActive 
-                                 ? 'bg-primary/10 dark:bg-white/10' 
-                                 : 'hover:bg-primary/5 dark:hover:bg-white/5'
-                             }`}
+                             className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors group/item ${ isChildActive ? 'bg-primary/10 dark:bg-white/10' : 'hover:bg-primary/5 dark:hover:bg-white/5' }`}
                            >
                              <span className={`material-symbols-outlined notranslate transition-colors ${
                                isChildActive 
@@ -189,11 +150,7 @@ const Navbar = () => {
                              }`}>
                                {child.icon}
                              </span>
-                             <span className={`text-sm font-bold transition-colors ${
-                               isChildActive 
-                                 ? 'text-primary dark:text-accent-gold' 
-                                 : 'text-gray-700 dark:text-gray-200 group-hover/item:text-primary dark:group-hover/item:text-accent-gold'
-                             }`}>
+                             <span className={`text-sm font-bold transition-colors ${ isChildActive ? 'text-primary dark:text-accent-gold' : 'text-gray-700 dark:text-gray-200 group-hover/item:text-primary dark:group-hover/item:text-accent-gold' }`}>
                                {child.name}
                              </span>
                            </Link>
@@ -222,9 +179,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Overlay */}
         <div 
-          className={`lg:hidden absolute top-full left-0 w-full bg-white dark:bg-[#0e3f45] border-t border-gray-100 dark:border-gray-800 shadow-2xl transition-all duration-300 ease-in-out overflow-hidden ${
-            isOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
-          }`}
+          className={`lg:hidden absolute top-full left-0 w-full bg-white dark:bg-[#0e3f45] border-t border-gray-100 dark:border-gray-800 shadow-2xl transition-all duration-300 ease-in-out overflow-hidden ${ isOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0' }`}
         >
           <div className="flex flex-col p-6 space-y-1">
             {navLinks.map((link) => (
@@ -233,11 +188,7 @@ const Navbar = () => {
                    <Link 
                     href={link.href} 
                     onClick={() => setIsOpen(false)}
-                    className={`flex-1 px-4 py-3 text-lg font-bold font-display ${
-                      isActive(link.href)
-                        ? 'text-primary dark:text-accent-gold'
-                        : 'text-gray-600 dark:text-gray-200'
-                    }`}
+                    className={`flex-1 px-4 py-3 text-lg font-bold font-display ${ isActive(link.href) ? 'text-primary dark:text-accent-gold' : 'text-gray-600 dark:text-gray-200' }`}
                   >
                     {link.name}
                   </Link>
@@ -279,15 +230,15 @@ const Navbar = () => {
                {/* Mobile Language Switcher */}
                <div className="flex justify-center gap-6 pb-2">
                   <button 
-                    onClick={() => { setIsOpen(false); handleLanguageChange('hi'); }}
-                    className={`flex items-center gap-2 text-sm font-bold uppercase tracking-widest cursor-pointer ${currentLang !== 'en' ? 'text-accent-gold' : 'text-gray-600 dark:text-gray-300 hover:text-accent-gold'}`}
+                    onClick={() => { setIsOpen(false); setLanguage('hi'); }}
+                    className={`flex items-center gap-2 text-sm font-bold uppercase tracking-widest cursor-pointer ${language !== 'en' ? 'text-accent-gold' : 'text-gray-600 dark:text-gray-300 hover:text-accent-gold'}`}
                   >
                     Hindi
                   </button>
                   <span className="w-px h-5 bg-gray-200 dark:bg-gray-700"></span>
                   <button 
-                    onClick={() => { setIsOpen(false); handleLanguageChange('en'); }}
-                    className={`flex items-center gap-2 text-sm font-bold uppercase tracking-widest cursor-pointer ${currentLang === 'en' ? 'text-accent-gold' : 'text-gray-600 dark:text-gray-300 hover:text-accent-gold'}`}
+                    onClick={() => { setIsOpen(false); setLanguage('en'); }}
+                    className={`flex items-center gap-2 text-sm font-bold uppercase tracking-widest cursor-pointer ${language === 'en' ? 'text-accent-gold' : 'text-gray-600 dark:text-gray-300 hover:text-accent-gold'}`}
                   >
                     English
                   </button>
@@ -297,7 +248,7 @@ const Navbar = () => {
                  onClick={() => { setIsOpen(false); setShowDonationModal(true); }}
                  className="flex items-center justify-center w-full rounded-full h-12 bg-primary text-white font-bold text-lg shadow-lg active:scale-95 transform"
                >
-                 दान करें
+                 {t('navbar.donate')}
                </button>
             </div>
           </div>

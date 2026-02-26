@@ -1,28 +1,29 @@
 "use client";
 
 import React, { useState } from 'react';
-import { FormatBabal } from './FormatBabal';
-import { historyData } from '@/data/history';
+
+import { useLanguage } from '@/context/LanguageContext';
 
 const HistoryFullReader = () => {
-  const [activeTab, setActiveTab] = useState(historyData.chapters[0].id);
+  const { t } = useLanguage();
+  const historyData = t('historyPage', true);
+  const chapters = historyData?.chapters || [];
+  const [activeTab, setActiveTab] = useState(chapters[0]?.id || "chapter-1");
 
-  const activeChapter = historyData.chapters.find(c => c.id === activeTab) || historyData.chapters[0];
+  const activeChapter = chapters.find((c: any) => c.id === activeTab) || chapters[0];
+
+  if (!chapters.length) return null;
 
   return (
     <div className="w-full">
       {/* Tab Navigation */}
       <div className="flex overflow-x-auto no-scrollbar border-b border-gray-100 dark:border-gray-800 mb-12">
         <div className="flex min-w-max gap-4 pb-2">
-          {historyData.chapters.map((chapter) => (
+          {chapters.map((chapter: any) => (
             <button
               key={chapter.id}
               onClick={() => setActiveTab(chapter.id)}
-              className={`px-6 py-4 text-sm font-bold uppercase tracking-widest transition-all relative ${
-                activeTab === chapter.id 
-                  ? 'text-accent-gold' 
-                  : 'text-gray-400 hover:text-gray-600 dark:hover:text-gray-200'
-              }`}
+              className={`px-6 py-4 text-sm font-bold uppercase tracking-widest transition-all relative ${ activeTab === chapter.id ? 'text-accent-gold' : 'text-gray-400 hover:text-gray-600 dark:hover:text-gray-200' }`}
             >
               <span>{chapter.title}</span>
               {activeTab === chapter.id && (
@@ -41,7 +42,7 @@ const HistoryFullReader = () => {
         <div className="relative z-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-12 h-px bg-accent-gold"></div>
-            <span className="text-accent-gold font-bold uppercase tracking-widest text-xs">अध्याय {historyData.chapters.indexOf(activeChapter) + 1}</span>
+            <span className="text-accent-gold font-bold uppercase tracking-widest text-xs">{t('historyPage.chaptersBadge') || 'अध्याय'} {chapters.indexOf(activeChapter) + 1}</span>
           </div>
 
           <h3 className="text-3xl md:text-5xl font-display font-black text-[#0d1b1c] dark:text-white mb-10 leading-tight">
@@ -50,7 +51,7 @@ const HistoryFullReader = () => {
 
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg mb-12 text-justify whitespace-pre-wrap">
-              <FormatBabal text={activeChapter.content} />
+              {activeChapter.content}
             </p>
 
             {activeChapter.aarti && (
@@ -58,7 +59,7 @@ const HistoryFullReader = () => {
                  <span className="material-symbols-outlined absolute top-6 right-8 text-accent-gold/20 text-6xl select-none notranslate">music_note</span>
                  <h4 className="text-accent-gold font-black text-xl mb-8 font-display uppercase tracking-widest">मूल आरती (नृसिंह आरती)</h4>
                  <div className="space-y-4">
-                    {activeChapter.aarti.map((line, idx) => (
+                    {activeChapter.aarti.map((line: string, idx: number) => (
                       <p key={idx} className="text-xl md:text-2xl font-serif font-medium text-[#0d1b1c] dark:text-gray-100 leading-snug">
                         {line}
                       </p>

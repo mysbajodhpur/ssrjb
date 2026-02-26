@@ -3,9 +3,12 @@
 
 import React from 'react';
 import { teamData } from '@/data/team';
-import { FormatBabal } from './FormatBabal';
+
+
+import { useLanguage } from '@/context/LanguageContext';
 
 const MentorshipBoard = () => {
+    const { t } = useLanguage();
     return (
         <section className="py-24 px-6 md:px-12 bg-gray-50 dark:bg-[#0b1214] rounded-[3rem] border border-gray-100 dark:border-gray-800 shadow-inner overflow-hidden relative">
             {/* Decorative Background */}
@@ -14,12 +17,12 @@ const MentorshipBoard = () => {
 
             <div className="max-w-6xl mx-auto relative z-10">
                 <div className="text-center mb-16">
-                    <span className="text-accent-gold font-bold uppercase tracking-[0.3em] text-xs mb-4 block">मार्गदर्शन मण्डल</span>
+                    <span className="text-accent-gold font-bold uppercase tracking-[0.3em] text-xs mb-4 block">{t('teamPage.mentorship.badge')}</span>
                     <h2 className="text-3xl md:text-5xl font-display font-black text-[#0d1b1c] dark:text-white mb-6">
-                        सम्मानित संरक्षक मण्डल
+                        {t('teamPage.mentorship.title')}
                     </h2>
                     <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-sm md:text-base italic leading-relaxed">
-                        संस्थान के कार्यों में मार्गदर्शन प्रदान करने वाला अनुभवी एवं प्रबुद्ध मार्गदर्शक मण्डल।
+                        {t('teamPage.mentorship.subtitle')}
                     </p>
                 </div>
 
@@ -35,11 +38,13 @@ const MentorshipBoard = () => {
                                 </div>
                                 <div>
                                     <p className="font-bold text-[#0d1b1c] dark:text-white text-lg leading-tight">
-                                        <FormatBabal text={mentor.name} />
+                                        {t(`teamPage.mentorship.items.${index}.name`)}
                                     </p>
                                     {(mentor.location || mentor.details) && (
                                         <p className="text-accent-gold font-bold text-[10px] md:text-xs uppercase tracking-widest mt-1">
-                                            <FormatBabal text={mentor.location || mentor.details || ""} />
+                                            {t(`teamPage.mentorship.items.${index}.location`) !== `teamPage.mentorship.items.${index}.location` 
+                                                ? t(`teamPage.mentorship.items.${index}.location`) 
+                                                : t(`teamPage.mentorship.items.${index}.details`)}
                                         </p>
                                     )}
                                 </div>
@@ -49,7 +54,7 @@ const MentorshipBoard = () => {
                 </div>
 
                 <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 text-center opacity-60">
-                    <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] font-black text-gray-400">संकेत : अमर आध्यात्मिक एवं सामाजिक धरोहर</p>
+                    <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] font-black text-gray-400">{t('teamPage.mentorship.footer')}</p>
                 </div>
             </div>
         </section>

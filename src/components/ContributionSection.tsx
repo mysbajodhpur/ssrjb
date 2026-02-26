@@ -2,28 +2,30 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useLanguage } from '@/context/LanguageContext';
 import DonationModal from '@/components/DonationModal';
 
 const ContributionSection = () => {
+  const { t } = useLanguage();
   const [showDonationModal, setShowDonationModal] = useState(false);
 
   const contributionItems = [
     { 
         icon: "volunteer_activism", 
-        title: "दान (Donation)", 
-        desc: "आपका छोटा सा आर्थिक सहयोग किसी के जीवन में बड़ा बदलाव ला सकता है।",
+        title: t('contributionSection.items.donation.title'), 
+        desc: t('contributionSection.items.donation.desc'),
         isDonate: true
     },
     { 
         icon: "groups", 
-        title: "स्वयंसेवा (Volunteer)", 
-        desc: "अपने समय और कौशल के माध्यम से हमारे सेवा कार्यों में अपना योगदान दें।",
+        title: t('contributionSection.items.volunteer.title'), 
+        desc: t('contributionSection.items.volunteer.desc'),
         link: "/contact"
     },
     { 
         icon: "campaign", 
-        title: "जन-जागृति (Awareness)", 
-        desc: "संस्थान के मिशन और पर्यावरण संरक्षण के संदेश को अधिक से अधिक लोगों तक पहुँचाएँ।",
+        title: t('contributionSection.items.awareness.title'), 
+        desc: t('contributionSection.items.awareness.desc'),
         link: "/contact"
     }
   ];
@@ -37,10 +39,10 @@ const ContributionSection = () => {
           
           <div className="max-w-6xl mx-auto relative z-10">
               <div className="text-center mb-16">
-                  <span className="text-accent-gold font-bold uppercase tracking-widest text-xs mb-2 block">सहयोग</span>
-                  <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0d1b1c] dark:text-white mb-4">आप कैसे <span className="text-primary dark:text-accent-gold italic font-serif font-medium">जुड़ सकते हैं?</span></h2>
+                  <span className="text-accent-gold font-bold uppercase tracking-widest text-xs mb-2 block">{t('contributionSection.badge')}</span>
+                  <h2 className="text-3xl lg:text-4xl font-display font-bold text-[#0d1b1c] dark:text-white mb-4">{t('contributionSection.title1')} <span className="text-primary dark:text-accent-gold italic font-serif font-medium">{t('contributionSection.title2')}</span></h2>
                   <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto italic">
-                      "परोपकाराय पुण्याय पापाय परपीडनम्" - दूसरों की सेवा ही सबसे बड़ा पुण्य है।
+                      {t('contributionSection.quote')}
                   </p>
               </div>
 
@@ -55,17 +57,17 @@ const ContributionSection = () => {
                               {item.desc}
                           </p>
                           {item.isDonate ? (
-                              <button 
-                                onClick={() => setShowDonationModal(true)}
-                                className="inline-flex items-center gap-2 text-primary dark:text-accent-gold font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all"
-                              >
-                                संपर्क करें <span className="material-symbols-outlined notranslate text-sm">arrow_forward</span>
-                              </button>
-                          ) : (
-                              <Link href={item.link || '#'} className="inline-flex items-center gap-2 text-primary dark:text-accent-gold font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all">
-                                संपर्क करें <span className="material-symbols-outlined notranslate text-sm">arrow_forward</span>
-                              </Link>
-                          )}
+                                <button 
+                                  onClick={() => setShowDonationModal(true)}
+                                  className="inline-flex items-center gap-2 text-primary dark:text-accent-gold font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all"
+                                >
+                                  {t('contributionSection.contactBtn')} <span className="material-symbols-outlined notranslate text-sm">arrow_forward</span>
+                                </button>
+                            ) : (
+                                <Link href={item.link || '#'} className="inline-flex items-center gap-2 text-primary dark:text-accent-gold font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all">
+                                  {t('contributionSection.contactBtn')} <span className="material-symbols-outlined notranslate text-sm">arrow_forward</span>
+                                </Link>
+                            )}
                       </div>
                   ))}
               </div>

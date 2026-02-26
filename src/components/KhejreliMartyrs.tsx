@@ -1,9 +1,15 @@
 "use client";
 
 import React from 'react';
-import { historyData } from '@/data/history';
+import { useLanguage } from '@/context/LanguageContext';
 
 const KhejreliMartyrs = () => {
+  const { t } = useLanguage();
+  const historyData = t('historyPage', true);
+  const khejarli = historyData?.khejarli || {};
+  const martyrs = khejarli.martyrs || [];
+
+  if (!martyrs.length) return null;
   return (
     <section className="py-24 px-6 md:px-12 bg-[#091518] text-white relative overflow-hidden">
       {/* Background Textures */}
@@ -16,14 +22,14 @@ const KhejreliMartyrs = () => {
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-3 text-accent-gold font-bold uppercase tracking-[0.3em] text-xs mb-4">
             <div className="w-8 h-px bg-accent-gold"></div>
-            सर्वोच्च बलिदान
+            {khejarli.badge}
             <div className="w-8 h-px bg-accent-gold"></div>
           </div>
           <h2 className="text-4xl md:text-6xl font-display font-black mb-8">
-            <span>खेजड़ली</span> का <span className="text-accent-gold italic serif font-normal">खडाणा</span>
+            <span>{khejarli.titlePrefix}</span> {khejarli.titleSuffix} <span className="text-accent-gold italic serif font-normal">{khejarli.titleHighlight}</span>
           </h2>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed italic">
-            "भादो सुदी दसवीं वि.स. 1787: अमृता देवी बिश्नोई के नेतृत्व में 363 बिश्नोई वीरों ने खेजड़ी वृक्षों की रक्षार्थ अपने प्राणों का बलिदान दिया। इसमें बाबल परिवार के 26 सदस्यों ने भी अपनी आहुति दी।"
+            {khejarli.description}
           </p>
         </div>
 
@@ -34,25 +40,25 @@ const KhejreliMartyrs = () => {
                  <div className="w-20 h-20 rounded-2xl bg-accent-gold/20 flex items-center justify-center text-accent-gold border border-accent-gold/30">
                     <span className="material-symbols-outlined text-4xl notranslate">shield_moon</span>
                  </div>
-                 <div>
-                    <h3 className="text-2xl font-bold font-display notranslate">शहीदों की नामावली</h3>
-                    <p className="text-accent-gold/80 font-medium notranslate">कुल 26 शहीद (23 पुरुष, 3 स्त्रियाँ)</p>
+                  <div>
+                    <h3 className="text-2xl font-bold font-display">{khejarli.martyrsListTitle}</h3>
+                    <p className="text-accent-gold/80 font-medium">{khejarli.martyrsListSubtitle}</p>
                  </div>
               </div>
               <div className="px-6 py-3 rounded-full bg-accent-gold text-black font-bold uppercase tracking-widest text-xs">
-                 मंगलवार, वि.स. 1787
+                 {khejarli.martyrsListDate}
               </div>
            </div>
 
            {/* Martyr List Grid */}
            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-6 gap-x-12">
-              {historyData.khejarli.martyrs.map((martyr, index) => {
+              {martyrs.map((martyr: string, index: number) => {
                 // Determine if it's a woman (noted as 'धर्मपत्नी' or 'बाई' in data)
                 const isWoman = martyr.includes('धर्मपत्नी') || martyr.includes('बाई');
                 return (
                   <div key={index} className="flex items-center gap-4 group">
                     <div className={`w-2 h-2 rounded-full ${isWoman ? 'bg-pink-400' : 'bg-accent-gold'} opacity-60 group-hover:scale-150 transition-transform`}></div>
-                    <span className={`text-lg transition-colors notranslate ${isWoman ? 'text-pink-100/90 italic font-medium' : 'text-gray-100 font-medium'} group-hover:text-accent-gold`}>
+                    <span className={`text-lg transition-colors ${isWoman ? 'text-pink-100/90 italic font-medium' : 'text-gray-100 font-medium'} group-hover:text-accent-gold`}>
                       {martyr}
                     </span>
                   </div>
@@ -62,7 +68,7 @@ const KhejreliMartyrs = () => {
 
            {/* Solemn Note */}
            <div className="mt-20 pt-10 border-t border-white/10 text-center opacity-70">
-              <p className="text-sm tracking-widest uppercase font-bold text-accent-gold/60">अमर शहीद सदैव स्मरणीय</p>
+              <p className="text-sm tracking-widest uppercase font-bold text-accent-gold/60">{khejarli.martyrsSolemnNote}</p>
               <div className="flex justify-center gap-4 mt-4">
                  <div className="w-1 h-1 bg-white rounded-full"></div>
                  <div className="w-1 h-1 bg-white rounded-full"></div>

@@ -1,23 +1,29 @@
 "use client";
 
 import React, { useState } from 'react';
-import { historyData } from '@/data/history';
+import { useLanguage } from '@/context/LanguageContext';
 
 const FamilyTree = () => {
-  const { lineage } = historyData.vanshavaliDetails;
+  const { t } = useLanguage();
+  const historyData = t('historyPage', true);
+  const vanshavaliDetails = historyData?.vanshavaliDetails || {};
+  const lineage = vanshavaliDetails.lineage || [];
+
   const [hoveredNode, setHoveredNode] = useState<number | null>(null);
+
+  if (!lineage.length) return null;
 
   return (
     <div className="py-20 bg-white dark:bg-[#0b1214]">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-20">
-          <span className="text-accent-gold font-bold uppercase tracking-widest text-xs mb-2 block">वंशावली</span>
-          <h2 className="text-4xl font-display font-black text-[#0d1b1c] dark:text-white">बाबल वंश का इतिहास</h2>
+          <span className="text-accent-gold font-bold uppercase tracking-widest text-xs mb-2 block">{vanshavaliDetails.badge}</span>
+          <h2 className="text-4xl font-display font-black text-[#0d1b1c] dark:text-white">{vanshavaliDetails.title}</h2>
           <div className="w-20 h-1 bg-accent-gold mx-auto mt-4 rounded-full"></div>
         </div>
 
         <div className="relative border-l-2 border-dashed border-accent-gold/30 ml-8 md:ml-32 py-10 space-y-16">
-          {lineage.map((person, index) => (
+          {lineage.map((person: any, index: number) => (
             <div 
               key={index} 
               className="relative pl-12 group"
@@ -37,9 +43,9 @@ const FamilyTree = () => {
               {/* Node Card */}
               <div className={`bg-gray-50 dark:bg-[#1a2024] p-6 lg:p-8 rounded-[2rem] border transition-all duration-500 relative ${hoveredNode === index ? 'border-accent-gold shadow-2xl shadow-accent-gold/10 -translate-y-1' : 'border-gray-100 dark:border-gray-800'}`}>
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
-                  <h3 className="text-2xl font-display font-bold text-[#0d1b1c] dark:text-white notranslate">{person.name}</h3>
+                  <h3 className="text-2xl font-display font-bold text-[#0d1b1c] dark:text-white">{person.name}</h3>
                   {person.village && (
-                    <span className="px-4 py-1.5 bg-accent-gold/10 text-accent-gold text-xs font-bold rounded-full border border-accent-gold/20 notranslate">
+                    <span className="px-4 py-1.5 bg-accent-gold/10 text-accent-gold text-xs font-bold rounded-full border border-accent-gold/20">
                        {person.village}
                     </span>
                   )}
@@ -51,11 +57,11 @@ const FamilyTree = () => {
                     <div className="flex flex-wrap gap-2">
                       {(Array.isArray(person.wives) ? person.wives : [person.wives]).map((w: any, i: number) => (
                         <div key={i} className="group/wife relative">
-                          <span className="inline-block px-3 py-1 bg-pink-50 dark:bg-pink-900/10 text-pink-700 dark:text-pink-300 text-[11px] font-bold rounded-md border border-pink-100 dark:border-pink-800/30 notranslate">
+                          <span className="inline-block px-3 py-1 bg-pink-50 dark:bg-pink-900/10 text-pink-700 dark:text-pink-300 text-[11px] font-bold rounded-md border border-pink-100 dark:border-pink-800/30">
                             {typeof w === 'string' ? w : w.name} {(w.from) && `(${w.from})`}
                           </span>
                           {w.details && (
-                            <div className="absolute bottom-full left-0 mb-2 w-48 p-3 bg-[#0b272c] text-white text-[10px] rounded-xl opacity-0 group-hover/wife:opacity-100 transition-opacity z-20 pointer-events-none shadow-xl border border-white/10 notranslate">
+                            <div className="absolute bottom-full left-0 mb-2 w-48 p-3 bg-[#0b272c] text-white text-[10px] rounded-xl opacity-0 group-hover/wife:opacity-100 transition-opacity z-20 pointer-events-none shadow-xl border border-white/10">
                               {w.details}
                             </div>
                           )}
@@ -68,7 +74,7 @@ const FamilyTree = () => {
                     <div className="flex flex-wrap gap-2 items-center">
                        <span className="text-[10px] uppercase font-bold text-gray-400 mr-2">पुत्र:</span>
                        {person.sons.map((son: string, i: number) => (
-                         <span key={i} className="px-3 py-1 bg-blue-50 dark:bg-blue-900/10 text-blue-700 dark:text-blue-300 text-[11px] font-bold rounded-md border border-blue-100 dark:border-blue-800/30 notranslate">
+                         <span key={i} className="px-3 py-1 bg-blue-50 dark:bg-blue-900/10 text-blue-700 dark:text-blue-300 text-[11px] font-bold rounded-md border border-blue-100 dark:border-blue-800/30">
                            {son}
                          </span>
                        ))}
@@ -93,7 +99,7 @@ const FamilyTree = () => {
         </div>
 
         <div className="mt-20 p-8 bg-accent-gold text-[#0b2b30] rounded-[2.5rem] text-center shadow-xl">
-           <p className="font-display font-bold text-lg">"अभी रणधीर जी बाबल वंश की 16वीं/17वीं पीढ़ियां चल रही है।"</p>
+           <p className="font-display font-bold text-lg">"{vanshavaliDetails.finalQuote}"</p>
         </div>
       </div>
     </div>
