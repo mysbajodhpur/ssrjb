@@ -23,7 +23,7 @@ const ExecutiveCommittee = () => {
         { title: t('teamPage.executive.vicePresidentsTitle'), data: executiveCommittee.vicePresidents, key: 'vicePresidents' },
         { title: t('teamPage.executive.keyBearersTitle'), data: executiveCommittee.keyBearers, key: 'keyBearers' },
         { title: t('teamPage.executive.secretariesTitle'), data: executiveCommittee.secretaries, key: 'secretaries' },
-    ];
+    ] as const;
 
     return (
         <section className="py-12 px-6 md:px-12 bg-[#f8fafb] dark:bg-black/20">
@@ -36,7 +36,7 @@ const ExecutiveCommittee = () => {
                 </div>
 
                 <div className="space-y-24">
-                    {sections.map((section, sIdx) => {
+                    {sections.map((section: any, sIdx: number) => {
                         const isTriple = section.data.length === 3;
                         return (
                             <div key={sIdx} className="relative">
@@ -49,7 +49,7 @@ const ExecutiveCommittee = () => {
                                 </div>
 
                                 <div className={`grid grid-cols-1 md:grid-cols-2 ${ section.data.length <= 2 ? 'lg:grid-cols-2' : section.data.length === 3 ? 'lg:grid-cols-3' : 'lg:grid-cols-4' } gap-6`}>
-                                    {(section.data as CommitteeMember[]).map((member, index) => (
+                                    {(section.data as CommitteeMember[]).map((member: CommitteeMember, index: number) => (
                                         <div 
                                             key={index} 
                                             className="bg-white dark:bg-[#1a2024] rounded-3xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex items-center gap-5 border border-gray-100 dark:border-gray-800"

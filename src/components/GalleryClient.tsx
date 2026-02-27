@@ -128,7 +128,7 @@ export default function GalleryClient() {
         <section className="py-20 px-6 md:px-20 bg-white dark:bg-[#0b1214]">
              <div className="max-w-[1440px] mx-auto">
                 <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
-                    {galleryItems.map((item, index) => (
+                    {galleryItems.map((item: any, index: number) => (
                         <div 
                             key={item.id} 
                             onClick={() => openModal(index)}

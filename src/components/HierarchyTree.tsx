@@ -15,7 +15,7 @@ const HierarchyTree = () => {
             <div className="absolute top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent-gold/20 via-accent-gold/50 to-accent-gold/20 left-1/2 -translate-x-1/2 rounded-full hidden md:block"></div>
 
             <div className="space-y-24 md:space-y-32 w-full max-w-4xl relative z-10 px-6">
-                {spiritualHierarchy.map((leader, index) => (
+                {(spiritualHierarchy as any[]).map((leader: any, index: number) => (
                     <div 
                         key={leader.id} 
                         className={`flex flex-col items-center group transition-all duration-700 delay-${index * 200}`}

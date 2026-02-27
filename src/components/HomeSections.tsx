@@ -20,7 +20,7 @@ export default function HomeSections() {
             { count: "9+", label: t('home.stats.construction'), icon: "temple_hindu" },
             { count: "1000+", label: t('home.stats.planting'), icon: "forest" },
             { count: "100%", label: t('home.stats.service'), icon: "volunteer_activism" }
-          ].map((item, index) => (
+          ].map((item: any, index: number) => (
             <div key={index} className="bg-white/95 dark:bg-[#0e3f45]/95 backdrop-blur p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center text-center group hover:-translate-y-1 transition-all duration-300 border-b-2 border-accent-gold ring-1 ring-black/5">
               <span className="material-symbols-outlined notranslate text-3xl text-primary dark:text-accent-gold mb-2 opacity-80 group-hover:scale-110 transition-transform">{item.icon}</span>
               <span className="text-2xl lg:text-3xl font-bold font-display text-primary dark:text-white mb-1">{item.count}</span>
@@ -92,7 +92,7 @@ export default function HomeSections() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8 min-h-[400px]">
-            {servicesData.slice(0, 3).map((service) => (
+            {servicesData.slice(0, 3).map((service: any) => (
               <div key={service.id} className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-xl h-[400px]">
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" 

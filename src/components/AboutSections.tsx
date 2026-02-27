@@ -126,7 +126,7 @@ export default function AboutSections() {
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                    {Array.from({ length: 13 }).map((_, index) => (
+                    {Array.from({ length: 13 }).map((_: any, index: number) => (
                         <div key={index} className="flex gap-4 p-7 rounded-2xl bg-gray-50 dark:bg-[#1a2024] border border-gray-100 dark:border-gray-800 hover:border-accent-gold/40 transition-all duration-300 hover:shadow-xl group">
                             <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-gold/10 flex items-center justify-center text-accent-gold font-bold font-display group-hover:bg-accent-gold group-hover:text-white transition-colors">
                                 {index + 1}
@@ -164,7 +164,7 @@ export default function AboutSections() {
                                 { label: t('aboutPage.structure.roles.spokesperson'), count: "1" },
                                 { label: t('aboutPage.structure.roles.orgSec'), count: "2" },
                                 { label: t('aboutPage.structure.roles.execMember'), count: "16", full: true },
-                            ].map((item, i) => (
+                            ].map((item: any, i: number) => (
                                 <li key={i} className={`flex items-center justify-between gap-3 p-2 border-b border-gray-50 dark:border-gray-800/50 ${item.full ? 'sm:col-span-2' : ''}`}>
                                     <div className="flex items-center gap-3 min-w-0">
                                         <div className="w-1.5 h-1.5 bg-accent-gold rounded-full shrink-0"></div>
@@ -197,7 +197,7 @@ export default function AboutSections() {
                                         {[
                                             { type: t('aboutPage.membership.lifetime'), fee: "₹11,000/-" },
                                             { type: t('aboutPage.membership.general'), fee: "₹1,100/-" }
-                                        ].map((fee, i) => (
+                                        ].map((fee: any, i: number) => (
                                             <div key={i} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-black/20 rounded-xl">
                                                 <span className="font-medium text-gray-700 dark:text-gray-300">{fee.type}</span>
                                                 <span className="font-bold text-primary dark:text-accent-gold">{fee.fee}</span>

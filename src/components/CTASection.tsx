@@ -44,10 +44,10 @@ const CTASection: React.FC<CTASectionProps> = ({
         
         <div className="w-full md:w-1/2 p-10 lg:p-20 text-[#0b2b30] relative z-10 flex flex-col justify-center">
           <h2 className="text-3xl lg:text-4xl font-black mb-6 font-display leading-tight">
-            {displayTitle.split('\n').map((line, i) => (
+            {(displayTitle as string).split('\n').map((line: string, i: number) => (
               <React.Fragment key={i}>
                 {line}
-                {i < displayTitle.split('\n').length - 1 && <br />}
+                {i < (displayTitle as string).split('\n').length - 1 && <br />}
               </React.Fragment>
             ))}
           </h2>
