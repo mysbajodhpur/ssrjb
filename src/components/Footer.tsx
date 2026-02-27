@@ -45,6 +45,7 @@ const Footer = () => {
               <li><Link href="/about" className="hover:text-accent-gold transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-accent-gold/50"></span>{t('footer.about')}</Link></li>
               <li><Link href="/team" className="hover:text-accent-gold transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-accent-gold/50"></span>{t('navbar.leadership')}</Link></li>
               <li><Link href="/gallery" className="hover:text-accent-gold transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-accent-gold/50"></span>{t('footer.gallery')}</Link></li>
+              <li><Link href="/video" className="hover:text-accent-gold transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-accent-gold/50"></span>{t('footer.videos')}</Link></li>
               <li><Link href="/contact" className="hover:text-accent-gold transition-colors flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-accent-gold/50"></span>{t('footer.contact')}</Link></li>
             </ul>
           </div>
