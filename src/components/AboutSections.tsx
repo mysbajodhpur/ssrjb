@@ -7,6 +7,7 @@ import KhejreliMartyrs from "@/components/KhejreliMartyrs";
 import FamilyTree from "@/components/FamilyTree";
 import CompletedWorks from "@/components/CompletedWorks";
 import UpcomingProjects from "@/components/UpcomingProjects";
+import PurSathriHistory from "@/components/PurSathriHistory";
 import CTASection from "@/components/CTASection";
 
 export default function AboutSections() {
@@ -39,8 +40,9 @@ export default function AboutSections() {
 
         {/* The Founder's Legacy - Tabbed History Reader */}
         <section className="relative py-24 px-6 md:px-12 lg:px-20 bg-white dark:bg-[#0e1214] overflow-hidden">
-             <div className="max-w-7xl mx-auto">
+             <div className="max-w-7xl mx-auto space-y-32">
                 <HistoryFullReader />
+                <PurSathriHistory />
              </div>
         </section>
 

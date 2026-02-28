@@ -253,6 +253,21 @@
             "note": "Note: Rules for membership expulsion, general assembly, and meetings will be governed according to the 'Institute Constitution Manual'."
         }
     },
+    "purSathri": {
+        "badge": "Miraculous History",
+        "title": "The History of Pur Sathri",
+        "subtitle": "A living miracle of Guru Jambhoji and Sant Randheer Ji",
+        "content": "Lord Guru Jambheshwar Bhagwan, while traveling from Malwa with his followers and his supreme disciple Randheer Ji, first arrived at Pur village (now part of Bhilwara). Guru Maharaj stayed at the residence of Ghatam Ji Thapan and performed Yagya continuously for five days. A 'Sathri' was constructed there, which still stands today.",
+        "miracleTitle": "The Miracle of the Ber & Banyan Tree",
+        "miracleContent": "Here, Randheer Ji once threw a Ber (Jujube) twig into the mud after using it as a Datun. Overnight, it sprouted into a plant. Generations later, when a descendant was hurt by its thorn and wished for a Banyan tree instead for shade, Guru Jambhoji's miracle manifested: That very night, a Banyan tree sprouted within the Ber tree. Both trees still grow together today, a testament to divine power.",
+        "dohaBadge": "From Jambhsar Part-2",
+        "dohaLine1": "बड़ होता तो दर्शन करते, काँटे पीड़ कबहूँ नहीं मरते।",
+        "dohaLine2": "उस कही सोझे तिस ही राता, गई बेर, बड़ भयो प्रभाता।।",
+        "dohaTranslation": "Had it been a Banyan tree, we would have come for Darshan, for its shade never brings the pain of thorns. As soon as these words were spoken, that very night, the Ber tree vanished and by dawn it became a Banyan tree.",
+        "locationInfo": "Pur Sathri ranks 6th among the 16 holy Sathris of Guru Maharaj.",
+        "author": "Swami Bhagwan Prakash",
+        "authorTitle": "Mahant, Samelia Dham"
+    },
     "servicesPage": {
         "hero": {
             "badge": "Our Initiatives",
