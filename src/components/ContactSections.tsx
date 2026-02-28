@@ -37,7 +37,15 @@ export default function ContactSections() {
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { icon: "mail", title: t('contactPage.cards.email.title'), desc: t('contactPage.cards.email.desc'), link: "mailto:info@randheerjibabal.org", linkText: "info@randheerjibabal.org" },
-              { icon: "call", title: t('contactPage.cards.call.title'), desc: t('contactPage.cards.call.desc'), link: "tel:+919818757905", linkText: "+91 98187 57905" },
+              { 
+                icon: "call", 
+                title: t('contactPage.cards.call.title'), 
+                desc: t('contactPage.cards.call.desc'), 
+                links: [
+                  { href: "tel:+919818757905", text: "+91 98187 57905" },
+                  { href: "tel:+919414914244", text: "+91 94149 14244" }
+                ] 
+              },
               { icon: "location_on", title: t('contactPage.cards.visit.title'), desc: t('contactPage.cards.visit.desc'), text: t('contactPage.cards.visit.text') }
             ].map((item, index) => (
               <div key={index} className="bg-white/95 dark:bg-[#1a2024]/95 backdrop-blur-md border-t-4 border-accent-gold p-8 rounded-2xl shadow-xl hover:-translate-y-2 transition-transform duration-300 group">
@@ -46,7 +54,13 @@ export default function ContactSections() {
                 </div>
                 <h3 className="text-2xl font-display font-bold text-[#0d1b1c] dark:text-white mb-3">{item.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm leading-relaxed">{item.desc}</p>
-                {item.link ? (
+                {item.links ? (
+                  <div className="flex flex-col gap-2">
+                    {item.links.map((link, lIdx) => (
+                      <a key={lIdx} className="text-[#0b2b30] dark:text-accent-gold font-bold uppercase tracking-wider text-xs hover:underline decoration-2 underline-offset-4" href={link.href}>{link.text}</a>
+                    ))}
+                  </div>
+                ) : item.link ? (
                   <a className="text-[#0b2b30] dark:text-accent-gold font-bold uppercase tracking-wider text-xs hover:underline decoration-2 underline-offset-4" href={item.link}>{item.linkText}</a>
                 ) : (
                   <span className="text-[#0b2b30] dark:text-accent-gold font-bold uppercase tracking-wider text-xs">{item.text}</span>
