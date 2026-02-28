@@ -60,7 +60,7 @@ const Navbar = () => {
           <div className="flex items-center gap-6">
             <a href="tel:+919818757905" className="flex items-center gap-2 hover:text-accent-gold transition-colors">
               <span className="material-symbols-outlined notranslate text-sm text-accent-gold">call</span>
-              +91 98187 57905
+              +91 98187 57905, +91 9414914244
             </a>
             <a href="mailto:info@randheerjibabal.org" className="flex items-center gap-2 hover:text-accent-gold transition-colors">
               <span className="material-symbols-outlined notranslate text-sm text-accent-gold">mail</span>
@@ -114,7 +114,7 @@ const Navbar = () => {
                <h3 className="text-xl font-display font-bold text-[#0d1b1c] dark:text-white leading-none">
                   {language === 'hi' ? 'संत श्री रणधीर जी' : 'Sant Shree Randheer Ji'} <span className="text-accent-gold">{language === 'hi' ? 'बाबल' : 'Babal'}</span>
                </h3>
-               <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 dark:text-gray-300 font-bold mt-1">{language === 'hi' ? 'सेवा संस्थान' : 'Seva Sansthan'}</span>
+               <span className="text-[14px] uppercase tracking-[0.2em] text-gray-500 dark:text-gray-300 font-bold mt-1">{language === 'hi' ? 'सेवा संस्थान' : 'Seva Sansthan'}</span>
             </div>
           </Link>
           

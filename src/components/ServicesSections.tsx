@@ -14,9 +14,9 @@ export default function ServicesSections() {
         {/* Hero Section */}
         <section className="relative py-24 flex items-center justify-center overflow-hidden">
            <div 
-             className="absolute inset-0 bg-cover bg-center" 
+             className="absolute inset-0 bg-cover bg-[center_top]" 
              style={{
-               backgroundImage: 'linear-gradient(rgba(11, 43, 48, 0.90), rgba(11, 43, 48, 0.98)), url("/images/463484571_8546353255443958_4588912091064799768_n.jpg")'
+               backgroundImage: 'linear-gradient(rgba(11, 43, 48, 0.6), rgba(11, 43, 48, 0.8)), url("/images/463484571_8546353255443958_4588912091064799768_n.jpg")'
              }}
            ></div>
            <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">

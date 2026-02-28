@@ -28,7 +28,7 @@ const Footer = () => {
                  <h3 className="text-2xl font-display font-bold text-white mb-2">
                     {t('footer.titlePart1')} <span className="text-accent-gold">{t('footer.titlePart2')}</span>
                  </h3>
-                 <span className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-bold block mt-1">{t('footer.titlePart3')}</span>
+                 <span className="text-[14px] uppercase tracking-[0.2em] text-gray-400 font-bold block mt-1">{t('footer.titlePart3')}</span>
                  <span className="text-[10px] text-gray-500 font-medium block mt-1 tracking-wider">Reg. No. COOP/2023/JODHPUR/203989</span>
               </div>
             </Link>
@@ -75,6 +75,10 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined notranslate text-accent-gold">call</span>
                 <a href={`tel:${t('contact.phone').replace(/\s/g, '')}`} className="text-gray-400 hover:text-white transition-colors">{t('contact.phone')}</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="material-symbols-outlined notranslate text-accent-gold">call</span>
+                <a href={`tel:${t('contact.phone1').replace(/\s/g, '')}`} className="text-gray-400 hover:text-white transition-colors">{t('contact.phone1')}</a>
               </li>
               <li className="flex items-center gap-3">
                 <span className="material-symbols-outlined notranslate text-accent-gold">mail</span>

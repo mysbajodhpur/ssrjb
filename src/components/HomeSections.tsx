@@ -18,7 +18,7 @@ export default function HomeSections() {
           {[
             { count: "500+", label: t('home.stats.years'), icon: "history_edu" },
             { count: "9+", label: t('home.stats.construction'), icon: "temple_hindu" },
-            { count: "1000+", label: t('home.stats.planting'), icon: "forest" },
+            { count: "500+", label: t('home.stats.planting'), icon: "forest" },
             { count: "100%", label: t('home.stats.service'), icon: "volunteer_activism" }
           ].map((item: any, index: number) => (
             <div key={index} className="bg-white/95 dark:bg-[#0e3f45]/95 backdrop-blur p-6 rounded-2xl shadow-xl flex flex-col items-center justify-center text-center group hover:-translate-y-1 transition-all duration-300 border-b-2 border-accent-gold ring-1 ring-black/5">

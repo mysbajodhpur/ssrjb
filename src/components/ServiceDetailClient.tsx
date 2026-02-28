@@ -47,7 +47,7 @@ export default function ServiceDetailClient({ slug, service, relatedCompleted, r
         <section className="relative flex items-center justify-center overflow-hidden pt-20 pb-30">
              {/* Background */}
              <div 
-                className="absolute inset-0 bg-cover bg-center bg-fixed" 
+                className="absolute inset-0 bg-cover bg-[center_top] bg-fixed" 
                 style={{ backgroundImage: `url('${service.heroImage}')` }}
              ></div>
              {/* Overlay */}

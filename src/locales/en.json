@@ -24,7 +24,7 @@
         "contact": "Contact",
         "terms": "Terms of Service",
         "privacy": "Privacy Policy",
-        "videos": "Videos",
+        "videos": "Randheer Ji Babal & Babal Parivar Video Documentary",
         "addressInfo": "HQ Shri Jambheshwar Bhagwan Mandir,<br/>Fitkasni, District Jodhpur, Rajasthan",
         "timingInfo": "Daily: 09:00 AM - 06:00 PM",
         "titlePart1": "Sant Shree Randheer Ji",
@@ -33,12 +33,13 @@
     },
     "contact": {
         "phone": "+91 98187 57905",
+        "phone1": "++91 9414914244",
         "email": "info@randheerjibabal.org",
         "address": "Jodhpur, Rajasthan"
     },
     "ctaSection": {
         "title": "Your Support, A Bright Future",
-        "description": "Your every contribution is a ray of hope. Through donation or service, you can bring a smile to someone's face today.",
+        "description": "Not trying is like accepting failure beforehand, while trying always keeps the possibility of winning alive.",
         "primaryBtnText": "Donate Now"
     },
     "home": {
@@ -205,7 +206,7 @@
             "presRole": "President, Sant Shree Randheer Ji Babal Seva Sansthan",
             "secQuote": "\"Our main goal is to sow the seeds of education and values within the society through the institute.\"",
             "secName": "Jaikishan Bishnoi",
-            "secRole": "General Secretary (Basni Nikuba)"
+            "secRole": "General Secretary, Sant Shree Randheer Ji Babal Seva Sansthan (Basni Nikuba)"
         },
         "objectives": {
             "badge": "Our Resolution",
@@ -356,14 +357,14 @@
         "executive": {
             "badge": "Executive Committee",
             "title": "Our Active Team",
-            "presidentsTitle": "President & Patron",
+            "presidentsTitle": "President",
             "vicePresidentsTitle": "Vice Presidents",
             "keyBearersTitle": "Key Office Bearers",
             "secretariesTitle": "Secretaries & Others",
             "presidents": [
                 {
                     "name": "Chairman Shri Ramesh Babal",
-                    "role": "Current President & Patron",
+                    "role": "Current President",
                     "description": "The current leader of the institute who is taking the 500-year-old legacy forward in the modern era."
                 }
             ],
@@ -633,8 +634,8 @@
         "upcoming": {
             "1": {
                 "title": "“Randheer Ji Babal” Library Construction",
-                "description": "A modern library in Fitkasni village for the bright future of children. Efforts are ongoing to clear the hall.",
-                "location": "Fitkasni"
+                "description": "A modern library in all villages for the bright future of children.",
+                "location": "All villages"
             },
             "2": {
                 "title": "Randheer Ji Park & Water Cooler",
@@ -665,8 +666,8 @@
             "items": {
                 "1": {
                     "title": "“Randheer Ji Babal” Library Construction",
-                    "description": "A modern library in Fitkasni village for the bright future of children. Efforts are ongoing to clear the hall.",
-                    "location": "Fitkasni"
+                    "description": "A modern library in all villages for the bright future of children.",
+                    "location": "All villages"
                 },
                 "2": {
                     "title": "Randheer Ji Park & Water Cooler",
@@ -848,7 +849,7 @@
             "era": "V.S. 1787",
             "description": "\"Bhado Sudi Dashami, V.S. 1787: Under the leadership of Amrita Devi Bishnoi, 363 brave Bishnois sacrificed their lives to protect the Khejri trees. In this event, 26 members of the Babal family also made their supreme sacrifice.\"",
             "martyrsListTitle": "Roll of Honor",
-            "martyrsListSubtitle": "Total 26 Martyrs (23 Men, 3 Women)",
+            "martyrsListSubtitle": "Total 26 Martyrs (22 Men, 4 Women)",
             "martyrsListDate": "Tuesday, V.S. 1787",
             "martyrsSolemnNote": "Immortal Martyrs Always Remembered",
             "martyrs": [

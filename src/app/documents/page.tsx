@@ -37,11 +37,11 @@ export default function DocumentsPage() {
       
       <main className="flex-grow">
         {/* Cinematic Hero Section */}
-        <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
              {/* Background Image */}
              <div 
-                className="absolute inset-0 bg-cover bg-center bg-fixed" 
-                 style={{ backgroundImage: 'linear-gradient(rgba(11, 43, 48, 0.9), rgba(11, 43, 48, 0.95)), url("/images/gallery-img-02.jpeg")' }}
+                className="absolute inset-0 bg-cover bg-[center_top] bg-fixed" 
+                 style={{ backgroundImage: 'linear-gradient(rgba(11, 43, 48, 0.6), rgba(11, 43, 48, 0.8)), url("/images/gallery-img-02.jpeg")' }}
              ></div>
 
              <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
