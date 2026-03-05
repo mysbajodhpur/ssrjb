@@ -1,6 +1,7 @@
 
 import type { Metadata } from "next";
 import { Poppins, Montserrat } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -62,6 +63,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  verification: {
+    google: "IuDCtlWnvJ3cDKA1Eb3bEOgIIEYo8PaccoNu_y7dAEc",
+  },
 };
 
 export default function RootLayout({
@@ -79,6 +83,19 @@ export default function RootLayout({
       >
         <LanguageProvider>
           {children}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-12NRDDJBRM"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-12NRDDJBRM');
+            `}
+          </Script>
           <FloatingVideoButton />
           <BackToTop />
         </LanguageProvider>
