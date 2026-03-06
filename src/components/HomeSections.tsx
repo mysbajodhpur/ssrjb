@@ -13,7 +13,7 @@ export default function HomeSections() {
   return (
     <>
       {/* Stats Section - Floating */}
-      <section className="relative z-30 -mt-20 px-4 sm:px-6 mb-20 pointer-events-none">
+      <section className="relative z-30 mt-20 px-4 sm:px-6 mb-20 pointer-events-none">
         <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 pointer-events-auto">
           {[
             { count: "500+", label: t('home.stats.years'), icon: "history_edu" },

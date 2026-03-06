@@ -16,9 +16,9 @@ const HomeHero = () => {
       <section className="relative pb-30 flex items-center justify-center px-6 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div 
-            className="w-full h-full bg-cover bg-center bg-no-repeat transform scale-105 animate-slow-zoom" 
+            className="w-full h-full bg-[length:100%_auto] bg-center bg-no-repeat transform scale-105 animate-slow-zoom" 
             style={{
-              backgroundImage: 'url("/images/gallery-img-09.jpeg")'
+              backgroundImage: 'url("/images/old-mukam.jpg")'
             }}
           ></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-primary/95 z-10"></div>
